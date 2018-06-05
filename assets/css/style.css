@@ -1,0 +1,67 @@
+
+
+/*//////////////////////////////////////////////////////////////////
+[ FONT ]*/
+
+@font-face {
+  font-family: Poppins-Regular;
+  src: url('../assets/plugin/fonts/poppins/Poppins-Regular.ttf'); 
+}
+
+@font-face {
+  font-family: Poppins-Medium;
+  src: url('../plugin/fonts/poppins/Poppins-Medium.ttf'); 
+}
+
+@font-face {
+  font-family: Poppins-Bold;
+  src: url('../plugin/fonts/poppins/Poppins-Bold.ttf'); 
+}
+
+@font-face {
+  font-family: Poppins-SemiBold;
+  src: url('../plugin/fonts/poppins/Poppins-SemiBold.ttf'); 
+}
+
+/*==================================================================
+[ Title form ]*/
+.login-form-title {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  padding: 70px 15px 74px 15px;
+}
+
+.login-form-title-1 {
+  font-family: Poppins-Bold;
+  font-size: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.login-form-title::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(54,84,99,0.7);
+}
