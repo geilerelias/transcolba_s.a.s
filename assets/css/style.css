@@ -45,7 +45,7 @@
   padding: 70px 15px 74px 15px;
 }
 
-.login-form-title-1 {
+.title-1 {
   font-family: Poppins-Bold;
   font-size: 30px;
   color: #fff;
@@ -54,7 +54,7 @@
   text-align: center;
 }
 
-.login-form-title::before {
+.title::before {
   content: "";
   display: block;
   position: absolute;
