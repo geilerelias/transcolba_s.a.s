@@ -5,7 +5,7 @@
 		<meta charset="utf-8">
 		<link href="../assets/img/favicon-32x32.png" rel="shortcut icon">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<title>Page Title</title>
+		<title>Transcolba</title>
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -15,10 +15,10 @@
 	<body>
 		
 		<div class="bmd-layout-container bmd-drawer-f-l bmd-drawer-overlay">
-			<header class="bmd-layout-header">
-				<div  class="nav-cabecera-transcolba">
-					<div class="row ">
-						<div class="col-6 pl-5 pt-4 jus">
+			<header class="bmd-layout-header" id="header">
+				<div  class="nav-cabecera-transcolba " id="header1">
+					<div class="row" >
+						<div class="col-6 pl-5 pt-4" >
 							<h3 class=" text-white text-capitalize  text-truncate font-weight-bold" style="">
 							control de mantenimiento
 							</h3>
@@ -28,7 +28,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="navbar navbar-light bg-faded shadow  " id="myHeader" data-spy="affix" data-offset-top="197"style="background-color: #0074c0;">
+				<div class="navbar navbar-light bg-faded shadow " id="navbar" data-spy="affix" data-offset-top="197"style="background-color: #0074c0;">
 					<button class="navbar-toggler  text-white btn-outline-info" type="button" data-toggle="drawer" data-target="#dw-s2" aria-expanded="false">
 					<span class="sr-only">Toggle drawer</span>
 					<i class="material-icons">menu</i>
@@ -262,90 +262,100 @@
 						<div class="col-lg-3 text-center">
 							<img class="rounded-circle" src="../assets/img/iconos/mantenimiento.png" alt="Generic placeholder image" width="140" height="140">
 							<h2>Mantenimiento</h2>
-							<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-							<p>
-								<a class="btn btn-secondary" href="#" role="button">View details »</a>
-							</p>
-						</div>
-						<!-- /.col-lg-4 -->
-						<div class="col-lg-3 text-center">
-							<img class="rounded-circle" src="../assets/img/iconos/costo.png" alt="Generic placeholder image" width="140" height="140">
-							<h2>Costos</h2>
-							<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-							<p>
-								<a class="btn btn-secondary" href="#" role="button">View details »</a>
-							</p>
-						</div>
-						<!-- /.col-lg-4 -->
-						<div class="col-lg-3 text-center">
-							<img class="rounded-circle" src="../assets/img/iconos/estadisticas.png" alt="Generic placeholder image" width="140" height="140">
-							<h2>Estadistica</h2>
-							<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-							<p>
-								<a class="btn btn-secondary" href="#" role="button">View details »</a>
-							</p>
-						</div>
-						<!-- /.col-lg-4 -->
-						<div class="col-lg-3 text-center">
-							<img class="rounded-circle" src="../assets/img/iconos/tarea.png" alt="Generic placeholder image" width="140" height="140">
-							<h2>Tareas</h2>
-							<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-							<p>
-								<a class="btn btn-secondary" href="#" role="button">View details »</a>
-							</p>
+							
+							<a class="btn btn-raised btn-danger" href="#" role="button">Ver más »</a>
+						</p>
+					</div>
+					<!-- /.col-lg-4 -->
+					<div class="col-lg-3 text-center">
+						<img class="rounded-circle" src="../assets/img/iconos/costo.png" alt="Generic placeholder image" width="140" height="140">
+						<h2>Costos</h2>
+						<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+						<p>
+							<a class="btn btn-secondary" href="#" role="button">View details »</a>
+						</p>
+					</div>
+					<!-- /.col-lg-4 -->
+					<div class="col-lg-3 text-center">
+						<img class="rounded-circle" src="../assets/img/iconos/estadisticas.png" alt="Generic placeholder image" width="140" height="140">
+						<h2>Estadistica</h2>
+						<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+						<p>
+							<a class="btn btn-secondary" href="#" role="button">View details »</a>
+						</p>
+					</div>
+					<!-- /.col-lg-4 -->
+					<div class="col-lg-3 text-center">
+						<img class="rounded-circle" src="../assets/img/iconos/tarea.png" alt="Generic placeholder image" width="140" height="140">
+						<h2>Tareas</h2>
+						<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+						<p>
+							<a class="btn btn-secondary" href="#" role="button">View details »</a>
+						</p>
+					</div>
+					
+				</main>
+				
+				
+				<footer class="footer">
+					<div class="container-fluid pt-lg-4" style="background-color:#279beb; ">
+						<div class="row  ">
+							<div class="col-4 text-white text-center">
+								<h5>Contacto</h5>
+								<p>Tel. 5798900</p>
+								
+							</div>
+							<div class="col-4 text-white text-center">
+								<h5>Direccion</h5>
+								<p>Calle 32 # 45-67 Valledupar</p>
+							</div>
+							<div class="col-4 text-white text-center">
+								<h5>Compartir</h5>
+								<p>Contacto</p>
+							</div>
 						</div>
 						
-					</main>
-					
-					
-					<footer class="footer">
-						<div class="container-fluid pt-lg-4" style="background-color:#279beb; ">
-							<div class="row  ">
-								<div class="col-4 text-white text-center">
-									<h5>Contacto</h5>
-									<p>Tel. 5798900</p>
-									
-								</div>
-								<div class="col-4 text-white text-center">
-									<h5>Direccion</h5>
-									<p>Calle 32 # 45-67 Valledupar</p>
-								</div>
-								<div class="col-4 text-white text-center">
-									<h5>Compartir</h5>
-									<p>Contacto</p>
-								</div>
-							</div>
-							
+					</div>
+					<div class=" row justify-content-center  bg-secondary-transcolba" style="">
+						<div class="text-center py-3 text-white">
+							©
+							<script>document.write(new Date().getFullYear())</script>
+							Copyright:  Kendy Alfaro
 						</div>
-						<div class=" row justify-content-center  bg-secondary-transcolba" style="">
-							<div class="text-center py-3 text-white">
-								©
-								<script>document.write(new Date().getFullYear())</script>
-								Copyright:  Kendy Alfaro
-							</div>
-						</div>
-					</footer>
-				</div>
-				<!-- Optional JavaScript -->
-				<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-				<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-				<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
-				<script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
-				<script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
-				<script>
-					window.onscroll = function() {myFunction()};
-				// Get the header
-				var header = document.getElementById("myHeader");
-				// Get the offset position of the navbar
-				var sticky = header.offsetTop;
-				// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-				function myFunction() {
-				if (window.pageYOffset >= sticky) {
-				header.classList.add("sticky");
-				} else {
-				header.classList.remove("sticky");
-				}
-				}
-				</script>
-			</body>
-		</html>
+					</div>
+				</footer>
+			</div>
+			<!-- Optional JavaScript -->
+			<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+			<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+			<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+			<script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+			<script>
+				$(document).ready(function() { $('body').bootstrapMaterialDesign(); });
+			</script>
+
+			<script>
+				// When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var navbar = document.getElementById("header");
+
+// Get the offset position of the navbar
+//var sticky =  $("#navbar").scrollTop();
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= 100) {
+    navbar.classList.add("fixed-top")
+    $("#header1").hide( 1000 );
+    
+  } else {
+    navbar.classList.remove("fixed-top");
+    $("#header1").show( "slow" );
+  }
+}
+			</script>
+			
+		</body>
+	</html>
