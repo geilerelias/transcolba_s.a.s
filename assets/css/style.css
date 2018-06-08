@@ -66,7 +66,7 @@
   background-color: rgba(54,84,99,0.7);
 }
 
-/* inicio */
+/*----------- inicio------- */
 .img-menu{
   width: 100%;
   position: relative;
@@ -97,4 +97,12 @@
   top: 0;
   left: 0;
   background-color: #3654636e;
+}
+/*-------cabecera ---------*/
+.nav-active-transcolba{
+  border-bottom: 2px solid white; 
+}
+
+.nav-cabecera-transcolba{
+  height: 100px; background-color: #279beb;
 }
