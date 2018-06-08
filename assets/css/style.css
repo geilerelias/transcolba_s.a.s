@@ -106,3 +106,18 @@
 .nav-cabecera-transcolba{
   height: 100px; background-color: #279beb;
 }
+
+.btn.btn-transcolba{
+    color: #03a9f4;
+    background-color: #d0301a;
+    border-color: #ccc
+}
+
+.bg-primary-transcolba{
+ background-color: #279beb !important;
+}
+
+.bg-secondary-transcolba{
+ background-color: #0074c0 !important;
+}
+#0879c5

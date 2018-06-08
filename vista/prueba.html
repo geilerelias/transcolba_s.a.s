@@ -13,6 +13,7 @@
 		<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
 	</head>
 	<body>
+		
 		<div class="bmd-layout-container bmd-drawer-f-l bmd-drawer-overlay">
 			<header class="bmd-layout-header">
 				<div  class="nav-cabecera-transcolba">
@@ -27,7 +28,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="navbar navbar-light bg-faded shadow " style="background-color: #0074c0;">
+				<div class="navbar navbar-light bg-faded shadow  " id="myHeader" data-spy="affix" data-offset-top="197"style="background-color: #0074c0;">
 					<button class="navbar-toggler  text-white btn-outline-info" type="button" data-toggle="drawer" data-target="#dw-s2" aria-expanded="false">
 					<span class="sr-only">Toggle drawer</span>
 					<i class="material-icons">menu</i>
@@ -51,8 +52,8 @@
 							</li>
 						</ul>
 					</div>
-					
 				</div>
+				
 			</header>
 			<div id="dw-s2" class="bmd-layout-drawer bg-faded" aria-expanded="false" aria-hidden="true">
 				<header class="img-menu img-fluid" style="background-image: url(../assets/img/bg-menu.jpg);" >
@@ -316,11 +317,11 @@
 							</div>
 							
 						</div>
-						<div class=" row justify-content-center" style="background-color: #0074c0;">
+						<div class=" row justify-content-center  bg-secondary-transcolba" style="">
 							<div class="text-center py-3 text-white">
-								© 
+								©
 								<script>document.write(new Date().getFullYear())</script>
-							     Copyright:  Kendy Alfaro
+								Copyright:  Kendy Alfaro
 							</div>
 						</div>
 					</footer>
@@ -331,5 +332,20 @@
 				<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
 				<script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
 				<script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+				<script>
+					window.onscroll = function() {myFunction()};
+				// Get the header
+				var header = document.getElementById("myHeader");
+				// Get the offset position of the navbar
+				var sticky = header.offsetTop;
+				// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+				function myFunction() {
+				if (window.pageYOffset >= sticky) {
+				header.classList.add("sticky");
+				} else {
+				header.classList.remove("sticky");
+				}
+				}
+				</script>
 			</body>
 		</html>
