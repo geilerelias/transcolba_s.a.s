@@ -124,4 +124,12 @@
 .bg-secondary-transcolba{
  background-color: #0074c0 !important;
 }
-#0879c5
+
+.form-inline .input-search{
+  background-image: linear-gradient(to top, #ffffff 2px, rgba(63, 81, 181, 0) 2px), linear-gradient(to top, #fafafa 1px, transparent 1px) !important;
+  color: white !important;
+}
+
+.input-search::placeholder { 
+  color: #cad1ff !important; 
+}
