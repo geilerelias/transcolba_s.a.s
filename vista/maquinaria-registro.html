@@ -1,59 +1,229 @@
-@@ -0,0 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!-- Required meta tags -->
         <meta charset="utf-8">
+        <link href="../assets/img/favicon-32x32.png" rel="shortcut icon">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <title>Registro Componente</title>
-        
-        <!-- Include Bootstrap CSS -->
-         <link rel="stylesheet" type="text/css" href="../assets/plugin/css/bootstrap-material-design.css">
-        <link rel="stylesheet" type="text/css" href="../assets/plugin/iconfont/material-icons.css">
-        <link rel="stylesheet" type="text/css" href="../assets/plugin/css/sweetalert2.css">
+        <title>Registro de Maquinas</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!--estilos propios---->
         <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
     </head>
     <body>
-        <div class="container-fluid">
-            <nav class="navbar navbar-light bg-inverse primary navbar-expand-md fixed-top " style="background-color: #d8d8d8;" >
-                <a class="navbar-brand" href="login.php">Inicio</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Registro
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                    <a class="dropdown-item " href="registroCliente.php" >Registro Cliente</a>
-                                    <a class="dropdown-item" href="registroProducto.php" >Registro Producto</a>
-                                    <a class="dropdown-item" href="registroMovimiento.php" >Registro Movimiento</a>
+        
+        <div class="bmd-layout-container bmd-drawer-f-l bmd-drawer-overlay">
+            <header class="bmd-layout-header" id="header">
+                <div  class="nav-cabecera-transcolba " id="header1">
+                    <div class="row" >
+                        <div class="col-6 pl-5 pt-4" >
+                            <h3 class=" text-white text-capitalize  text-truncate font-weight-bold" style="">
+                            control de mantenimiento
+                            </h3>
+                        </div>
+                        <div class="row justify-content-end pr-4 col-6">
+                            <img src="../assets/img/header-icon2.png" class="img-fluid" alt="Responsive image">
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar navbar-light bg-faded shadow " id="navbar" data-spy="affix" data-offset-top="197"style="background-color: #0074c0;">
+                    <button class="navbar-toggler  text-white btn-outline-info" type="button" data-toggle="drawer" data-target="#dw-s2" aria-expanded="false">
+                    <span class="sr-only">Toggle drawer</span>
+                    <i class="material-icons">menu</i>
+                    </button>
+                    <div class="d-none d-sm-block">
+                        <ul class="nav justify-content-end  " >
+                           <div class="btn-group ">
+                                     <a class="nav-link text-white text-capitalize" href="prueba.html">Inicio</a>
                                 </div>
-                            </div>
-                        </li>
-                        <li>
-                            <a class="btn btn-secondary dropdown-toggle"  id="dropdownMenu1" aria-haspopup="true" aria-expanded="false">
-                                Reportes
-                            </a>
-                        </li>
-                        <li  class="nav-item">
-                            <a class="btn btn-secondary nav-link"  href="registroMovimiento.php">
-                                Movimientos
-                            </a>
-                        </li>
-                    </ul>
-                    <form class="form-inline mt-2 mt-md-0">
-                        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Buscar">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-                    </form>
+                                <div class="btn-group ">
+                                    <button class="btn dropdown-toggle text-white text-capitalize" type="button" id="buttonMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Maquinaria
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="buttonMenu1">
+                                        <a class="dropdown-item" href="#">Registrar</a>
+                                        <a class="dropdown-item" href="#">Modificar</a>
+                                        <a class="dropdown-item" href="#">Eliminar</a>
+                                        <a class="dropdown-item" href="#">Consultar</a>
+                                    </div>
+                                </div>
+                               
+                          
+                            <li class="nav-item text-white">
+                                <a class="nav-link text-white text-capitalize" href="#">Componentes</a>
+                            </li>
+                            <li class="nav-item text-white">
+                                <a class="nav-link text-white text-capitalize" href="#">Insidencias</a>
+                            </li>
+                            <li class="nav-item text-white">
+                                <a class="nav-link text-white text-capitalize" href="#">Salir</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 
-            </nav>
+            </header>
+            <div id="dw-s2" class="bmd-layout-drawer bg-faded" aria-expanded="false" aria-hidden="true">
+                <header class="img-menu img-fluid" style="background-image: url(../assets/img/bg-menu.jpg);" >
+                    <img id="imagen-usuario" name="imagen-usuario" data-src="holder.js/75x75" class="rounded-circle " alt="75x75" src="" data-holder-rendered="true" style="width: 75px; height: 75px;"  >
+                    <a class="navbar-brand title-1 text-white text-capitalize "> <small>Nombre de usuario</small> </a>
+                </header>
+                <ul class="nav flex-column flex-nowrap pt-3">
+                    <li class="nav-item">
+                        <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="#">
+                            <div class="row">
+                                <div class="col-1">
+                                    <i  class="material-icons ">bar_chart</i>
+                                </div>
+                                <div class="col-3 pt-1">
+                                    Estadisticas
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center collapse" href="#" data-toggle="collapse" data-target="#menu-reporte">
+                            <div class="row">
+                                <div class="col-1">
+                                    <i  class="material-icons ">description</i>
+                                </div>
+                                <div class="col-3 pt-1">
+                                    Reportes
+                                </div>
+                            </div>
+                        </a>
+                        <div class="collapse" id="menu-reporte" aria-expanded="false">
+                            <ul class="flex-column pl-2 nav">
+                                
+                                <li class="nav-item">
+                                    <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="#">
+                                        <div class="row">
+                                            <div class="col-1">
+                                                <i  class="material-icons ">local_gas_station</i>
+                                            </div>
+                                            <div class="col-3 pt-1">
+                                                <small> Combustible por Maquinaria</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                
+                                <li class="nav-item">
+                                    <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="#">
+                                        <div class="row">
+                                            <div class="col-1">
+                                                <i  class="material-icons ">build</i>
+                                            </div>
+                                            <div class="col-3 pt-1">
+                                                <small> Daños y fallas</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                
+                                <li class="nav-item">
+                                    <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="#">
+                                        <div class="row">
+                                            <div class="col-1">
+                                                <i  class="material-icons ">monetization_on</i>
+                                            </div>
+                                            <div class="col-3 pt-1">
+                                                <small> Gastos monetarios </small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="#">
+                            <div class="row">
+                                <div class="col-1">
+                                    <i  class="material-icons ">notifications_active</i>
+                                </div>
+                                <div class="col-3 pt-1">
+                                    Notificaciones
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center collapse" href="#" data-toggle="collapse" data-target="#submenu1">
+                            <div class="row">
+                                <div class="col-1">
+                                    <i  class="material-icons ">assignment_turned_in</i>
+                                </div>
+                                <div class="col-3 pt-1">
+                                    Tareas
+                                </div>
+                            </div>
+                        </a>
+                        <div class="collapse" id="submenu1" aria-expanded="false">
+                            <ul class="flex-column pl-2 nav">
+                                
+                                <li class="nav-item">
+                                    <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="#">
+                                        <div class="row">
+                                            <div class="col-1">
+                                                <i  class="material-icons ">assignment_returned</i>
+                                            </div>
+                                            <div class="col-3 pt-1">
+                                                <small> Crear</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                
+                                <li class="nav-item">
+                                    <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="#">
+                                        <div class="row">
+                                            <div class="col-1">
+                                                <i  class="material-icons ">assignment_return</i>
+                                            </div>
+                                            <div class="col-3 pt-1">
+                                                <small>Modificar</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                
+                                <li class="nav-item">
+                                    <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="#">
+                                        <div class="row">
+                                            <div class="col-1">
+                                                <i  class="material-icons ">assignment</i>
+                                            </div>
+                                            <div class="col-3 pt-1">
+                                                <small>Estado</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="#">
+                            <div class="row">
+                                <div class="col-1">
+                                    <i  class="material-icons ">clear
+                                    </i>
+                                </div>
+                                <div class="col-3 pt-1">
+                                    Salir
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
             <div class="container pt-5 mt-5">
                 <div class="row justify-content-center">
                     <div class="col-md-9 col-sm-6">
@@ -64,7 +234,7 @@
                                         Registro de Maquinas
                                     </span>
                                 </div>
-                            
+                                
                                 <div class="card-body ">
                                     <div class="row">
                                         <div class="col-sm">
@@ -131,22 +301,34 @@
                 </div>
             </div>
         </div>
-    </div>
-   <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script type="text/javascript" src="../assets/plugin/js/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="../assets/plugin/js/popper.js"></script>
-    <!-- Include SmartWizard JavaScript source -->
-    <script type="text/javascript" src="../assets/plugin/js/jquery.smartWizard.js"></script>
-    <script type="text/javascript" src="../assets/plugin/js/sweetalert2.js"></script>
-    <script type="text/javascript" src="../assets/plugin/js/bootstrap-material-design.min.js"></script>
-    
-    <script>
-    $(document).ready(function () {
-    $('body').bootstrapMaterialDesign();
-    });
-    </script>
-
-</body>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+        <script>
+        $(document).ready(function() { $('body').bootstrapMaterialDesign(); });
+        </script>
+        <script>
+        // When the user scrolls the page, execute myFunction
+        window.onscroll = function() {myFunction()};
+        // Get the navbar
+        var navbar = document.getElementById("header");
+        // Get the offset position of the navbar
+        //var sticky =  $("#navbar").scrollTop();
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+        if (window.pageYOffset >= 120) {
+        navbar.classList.add("fixed-top")
+        $("#header1").hide( 1000 );
+        
+        } else {
+        navbar.classList.remove("fixed-top");
+        $("#header1").show( "slow" );
+        }
+        }
+        
+        </script>
+        
+    </body>
 </html>
