@@ -103,8 +103,12 @@
   border-bottom: 2px solid white; 
 }
 
+.nav-transcolba{
+  height: 100px; 
+  background-color: #279beb !important;
+}
 .nav-cabecera-transcolba{
-  height: 100px; background-color: #279beb;
+  height: 60px; background-color: #279beb;
 }
 
 .btn.btn-transcolba{

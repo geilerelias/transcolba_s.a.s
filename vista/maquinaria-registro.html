@@ -14,22 +14,30 @@
         <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
     </head>
     <body>
-
         <div class="bmd-layout-container bmd-drawer-f-l bmd-drawer-overlay">
             <header class="bmd-layout-header" id="header">
-              
+                
                 <div class="navbar navbar-light bg-faded shadow fixed-top" id="navbar" data-spy="affix" data-offset-top="197" style="background-color: #0074c0;">
                     <button class="navbar-toggler  text-white btn-outline-info" type="button" data-toggle="drawer" data-target="#dw-s2" aria-expanded="false">
-                        <span class="sr-only">Toggle drawer</span>
-                        <i class="material-icons">menu</i>
+                    <span class="sr-only">Toggle drawer</span>
+                    <i class="material-icons">menu</i>
                     </button>
                     <div class="d-none d-sm-block">
                         <ul class="nav justify-content-end  " >
-                            <li class="nav-item nav-active-transcolba" >
-                                <a class="nav-link text-white text-capitalize active" href="#">Inicio</a>
+                            <li class="nav-item dropdown " >
+                                <div>
+                                     <a class="nav-link text-white text-capitalize" href="prueba.html">Inicio</a
+                                </div>
                             </li>
-                            <li class="nav-item text-white">
-                                <a class="nav-link text-white text-capitalize" href="#">Maquinaria</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-capitalize text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Maquinaria
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#">Registro</a>
+                                    <a class="dropdown-item" href="#">Modificar</a>
+                                    <a class="dropdown-item" href="#">Eliminar</a>
+                                </div>
                             </li>
                             <li class="nav-item text-white">
                                 <a class="nav-link text-white text-capitalize" href="#">Componentes</a>
@@ -43,7 +51,6 @@
                         </ul>
                     </div>
                 </div>
-
             </header>
             <div id="dw-s2" class="bmd-layout-drawer bg-faded" aria-expanded="false" aria-hidden="true">
                 <header class="img-menu img-fluid" style="background-image: url(../assets/img/bg-menu.jpg);" >
@@ -63,7 +70,6 @@
                             </div>
                         </a>
                     </li>
-
                     <li class="nav-item">
                         <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center collapse" href="#" data-toggle="collapse" data-target="#menu-reporte">
                             <div class="row">
@@ -77,7 +83,6 @@
                         </a>
                         <div class="collapse" id="menu-reporte" aria-expanded="false">
                             <ul class="flex-column pl-2 nav">
-
                                 <li class="nav-item">
                                     <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="#">
                                         <div class="row">
@@ -90,7 +95,6 @@
                                         </div>
                                     </a>
                                 </li>
-
                                 <li class="nav-item">
                                     <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="#">
                                         <div class="row">
@@ -103,7 +107,6 @@
                                         </div>
                                     </a>
                                 </li>
-
                                 <li class="nav-item">
                                     <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="#">
                                         <div class="row">
@@ -116,11 +119,9 @@
                                         </div>
                                     </a>
                                 </li>
-
                             </ul>
                         </div>
                     </li>
-
                     <li class="nav-item">
                         <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="#">
                             <div class="row">
@@ -146,7 +147,6 @@
                         </a>
                         <div class="collapse" id="submenu1" aria-expanded="false">
                             <ul class="flex-column pl-2 nav">
-
                                 <li class="nav-item">
                                     <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="#">
                                         <div class="row">
@@ -159,7 +159,6 @@
                                         </div>
                                     </a>
                                 </li>
-
                                 <li class="nav-item">
                                     <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="#">
                                         <div class="row">
@@ -172,7 +171,6 @@
                                         </div>
                                     </a>
                                 </li>
-
                                 <li class="nav-item">
                                     <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="#">
                                         <div class="row">
@@ -185,7 +183,6 @@
                                         </div>
                                     </a>
                                 </li>
-
                             </ul>
                         </div>
                     </li>
@@ -204,7 +201,7 @@
                     </li>
                 </ul>
             </div>
-              <div class="container pt-5 mt-5">
+            <div class="container pt-5 mt-5">
                 <div class="row justify-content-center">
                     <div class="col-md-9 col-sm-6">
                         <form action="MaquinariaRegistro_submit" method="get" accept-charset="utf-8">
@@ -214,7 +211,6 @@
                                         Registro de Maquinas
                                     </span>
                                 </div>
-
                                 <div class="card-body ">
                                     <div class="row">
                                         <div class="col-sm">
@@ -224,7 +220,7 @@
                                             </div>
                                         </div>
                                         <div class="col-sm">
-                                            <div class="form-group bmd-form-group">
+                                            <div class="form-group ">
                                                 <label for="input-marca" class="bmd-label-floating"> Marca</label>
                                                 <input type="text" class="form-control" id="input-marca" required  name="input-marca" aria-required="true" >
                                             </div>
@@ -250,9 +246,9 @@
                                             </div>
                                         </div>
                                         <div class="col-sm pt-2">
-                                            <div class="form-group bmd-form-group is-focused ">
-                                                <label for="input-fecha" class="bmd-label-floating"> Fecha de Adquisicion</label>
-                                                <input type="date" class="form-control form-control-sm" id="input-fecha" name="input-fecha" aria-required="true" >
+                                            <div class="form-group bmd-form-group  ">
+                                                <label for="input-fecha" class=""> Fecha de Adquisicion</label>
+                                                <input type="date" class="form-control form-control-sm" id="input-fecha" name="input-fecha"  >
                                             </div>
                                         </div>
                                     </div>
@@ -272,7 +268,6 @@
                                     </div>
                                 </div>
                                 <div class="card-footer text-right">
-
                                     <button type="submit" class="btn btn-raised btn-info">Guardar</button>
                                 </div>
                             </div>
@@ -280,6 +275,31 @@
                     </div>
                 </div>
             </div>
+            <footer class="footer">
+                    <div class="container-fluid pt-lg-4" style="background-color:#279beb; ">
+                        <div class="row  ">
+                            <div class="col-4 text-white text-center">
+                                <h5>Contacto</h5>
+                                <p>Tel. 5798900</p>
+                            </div>
+                            <div class="col-4 text-white text-center">
+                                <h5>Direccion</h5>
+                                <p>Calle 32 # 45-67 Valledupar</p>
+                            </div>
+                            <div class="col-4 text-white text-center">
+                                <h5>Compartir</h5>
+                                <p>Contacto</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" row justify-content-center  bg-secondary-transcolba" style="">
+                        <div class="text-center py-3 text-white">
+                            ©
+                            <script>document.write(new Date().getFullYear())</script>
+                            Copyright: <a href="https://grupocolba.com.co/transcolba/" >Transcolba s.a.s </a>
+                        </div>
+                    </div>
+                </footer>
             <!-- Optional JavaScript -->
             <!-- jQuery first, then Popper.js, then Bootstrap JS -->
             <script src="../assets/plugin/js/jquery-3.3.1.min.js" ></script>
@@ -287,26 +307,11 @@
             <script src="../assets/plugin/js/popper.js"></script>
             <script src="../assets/plugin/js/bootstrap-material-design.js"></script>
             <script>
-                                $(document).ready(function () {
-                                    $('body').bootstrapMaterialDesign();
-                                });
+            $(document).ready(function () {
+            $('body').bootstrapMaterialDesign();
+            });
             </script>
-
-           
-
+            
         </div>
     </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
