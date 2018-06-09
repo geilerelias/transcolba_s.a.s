@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
@@ -215,7 +215,7 @@
                     </li>
                 </ul>
             </div>
-            <main class="">
+            <main  id="main">
 
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
@@ -302,45 +302,47 @@
                         </div>
 
 
-                        <footer class="footer">
-                            <div class="container-fluid pt-lg-4" style="background-color:#279beb; ">
-                                <div class="row  ">
-                                    <div class="col-4 text-white text-center">
-                                        <h5>Contacto</h5>
-                                        <p>Tel. 5798900</p>
 
-                                    </div>
-                                    <div class="col-4 text-white text-center">
-                                        <h5>Direccion</h5>
-                                        <p>Calle 32 # 45-67 Valledupar</p>
-                                    </div>
-                                    <div class="col-4 text-white text-center">
-                                        <h5>Compartir</h5>
-                                        <p>Contacto</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class=" row justify-content-center  bg-secondary-transcolba" style="">
-                                <div class="text-center py-3 text-white">
-                                    ©
-                                    <script>document.write(new Date().getFullYear())</script>
-                                    Copyright:  Kendy Alfaro
-                                </div>
-                            </div>
-                        </footer>
                     </div>
                 </div>
+                <footer class="footer">
+                    <div class="container-fluid pt-lg-4" style="background-color:#279beb; ">
+                        <div class="row  ">
+                            <div class="col-4 text-white text-center">
+                                <h5>Contacto</h5>
+                                <p>Tel. 5798900</p>
+
+                            </div>
+                            <div class="col-4 text-white text-center">
+                                <h5>Direccion</h5>
+                                <p>Calle 32 # 45-67 Valledupar</p>
+                            </div>
+                            <div class="col-4 text-white text-center">
+                                <h5>Compartir</h5>
+                                <p>Contacto</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class=" row justify-content-center  bg-secondary-transcolba" style="">
+                        <div class="text-center py-3 text-white">
+                            ©
+                            <script>document.write(new Date().getFullYear())</script>
+                            Copyright: <a href="https://grupocolba.com.co/transcolba/" >Transcolba s.a.s </a>
+                        </div>
+                    </div>
+                </footer>
             </main>
             <!-- Optional JavaScript -->
             <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"  crossorigin="anonymous"></script>
-            <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"  crossorigin="anonymous"></script>
-            <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" crossorigin="anonymous"></script>
+            <script src="../assets/plugin/js/jquery-3.3.1.min.js" ></script>
+            <script src="../assets/plugin/js/jquery-3.3.1.slim.min.js" ></script>
+            <script src="../assets/plugin/js/popper.js"></script>
+            <script src="../assets/plugin/js/bootstrap-material-design.js"></script>
             <script>
-                                        $(document).ready(function () {
-                                            $('body').bootstrapMaterialDesign();
-                                        });
+                                $(document).ready(function () {
+                                    $('body').bootstrapMaterialDesign();
+                                });
             </script>
 
             <script>
@@ -359,15 +361,21 @@
                 function myFunction() {
                     if (window.pageYOffset >= 100) {
                         navbar.classList.add("fixed-top")
-                        $("#header1").hide(1000);
+                        $("#header1").hide('slow', function () {
+                        });
+                        $("#main").css("margin-top", "150px");
 
                     } else {
                         navbar.classList.remove("fixed-top");
-                        $("#header1").show("slow");
+                        $("#header1").show('slow', function () {
+                        });
+                        $("#main").css("margin-top", "auto");
+
                     }
                 }
 
             </script>
 
+        </div>
     </body>
 </html>
