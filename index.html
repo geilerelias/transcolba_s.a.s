@@ -30,9 +30,22 @@
         left: 0;
         background-color: rgba(255, 255, 255, 0.7);
         }
+        
+
+
+        .img-bg-card-login{
+             background: url('assets/img/p3.PNG') no-repeat center center fixed;background-color: #cccccc;   -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        }
         </style>
     </head>
-    <body class="title img-bg-login">
+    <body class=" img-bg-login">
         <div class="container-fluid">
             <!--------------container ------>
             
@@ -40,16 +53,22 @@
                 <div class="container card col-md-5 mt-5">
                     
                     <div class="row  ">
-                        <div id="imagen" class=" shadow p-3 d-none  d-md-block col-md-6" style="background-image: url(' assets/img/p3.PNG');background-repeat:no-repeat;background-color: #cccccc;">
+                        <div id="imagen" class=" shadow p-3 d-none  d-md-block col-md-6 img-bg-card-login">
                             <div class="row justify-content-center">
                                 <img src=" assets/img/p6.png" class="img-fluid" alt="Responsive image" >
                                 <p class=" text-center text-capitalize font-weight-bold text-white"> Control y gestion de flotas </p>
                                 <p class=" text-center text-capitalize font-weight-bold text-white"> grupo colba s.a.s </p>
                             </div>
                         </div>
-                        <div class="col-md-6 p-5 " >
+                        <div class="col-lg-6 pt-sm-5 pt-lg-5 col-md-6" >
+                            <div class="row justify-content-center  d-inline-flex d-sm-none pt-4">
+                                <div class="col-10">
+                                    <img src="assets/img/header-logo.png" class="img-fluid m-auto" alt="Responsive image">
+                                </div>
+                                
+                            </div>
                             <div class="row justify-content-center">
-                                <h4 class="pt-2"  >Inicio de Sesion</h4>
+                                <h4 class="pt-2 "  >Inicio de Sesion</h4>
                             </div>
                             
                             
@@ -77,6 +96,23 @@
                                     </div>
                                 </div>
                             </div>
+                            <form class="form-signin row">
+                                <div class="col-12">
+                                <img src="assets/img/header-logo.png" class="img-fluid m-auto " alt="Responsive image">
+                                </div>
+                                <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+                                <label for="inputEmail" class="sr-only">Email address</label>
+                                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                                <label for="inputPassword" class="sr-only">Password</label>
+                                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                                <div class="checkbox mb-3">
+                                    <label>
+                                        <input type="checkbox" value="remember-me"> Remember me
+                                    </label>
+                                </div>
+                                <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                                <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+                            </form>
                             <div class=" row  pt-3  justify-content-around">
                                 <button type="submit"  name="btnIniciar" id="btnIniciar"  class="btn btn-raised btn-info">Iniciar</button>
                                 
