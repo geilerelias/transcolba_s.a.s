@@ -98,6 +98,7 @@
   left: 0;
   background-color: #3654636e;
 }
+
 /*-------cabecera ---------*/
 .nav-active-transcolba{
   border-bottom: 2px solid white; 
@@ -132,4 +133,9 @@
 
 .input-search::placeholder { 
   color: #cad1ff !important; 
+}
+
+.text-transcolba{
+
+  color: #0074c0;
 }
