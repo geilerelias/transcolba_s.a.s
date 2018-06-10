@@ -24,7 +24,7 @@
                         </h5>
                     </div>
                     <div class="col-4 pt-1">
-                        <img src="../assets/img/logo-transcolba.png" class="img-fluid float-right"  alt="Responsive image" >
+                        <img src="../assets/img/logo-transcolba.png" class="img-fluid float-right p-3"  alt="Responsive image" >
                     </div>
                 </div>
                 <div class="navbar navbar-light bg-faded shadow " id="navbar" data-spy="affix" data-offset-top="197" style="background-color: #0074c0;">
@@ -38,20 +38,12 @@
                     
                     <div class="d-none d-sm-block row justify-content-center ">
                         <ul class="nav col-12">
-                            <li class="nav-item dropdown " >
-                                <div>
-                                    <a class="nav-link text-white text-capitalize" href="prueba.html">Inicio</a>
-                                </div>
+                            <li class="nav-item text-white " >
+                                <a class="nav-link text-white text-capitalize" href="prueba.html">Inicio</a>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle text-capitalize text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Maquinaria
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">Registro</a>
-                                    <a class="dropdown-item" href="#">Modificar</a>
-                                    <a class="dropdown-item" href="#">Eliminar</a>
-                                </div>
+                            <li class="nav-item text-white">
+                                <a class="nav-link text-white text-capitalize" href="#">Maquinaria</a>
+                                
                             </li>
                             <li class="nav-item text-white">
                                 <a class="nav-link text-white text-capitalize" href="#">Componentes</a>
@@ -64,10 +56,7 @@
                             </li>
                         </ul>
                     </div>
-                    <style>
                     
-                    }
-                    </style>
                     <form class="form-inline float-right pr-2">
                         <input class="form-control mr-sm-2 input-search"   type="search" placeholder="Buscar" aria-label="Search">
                         <button class="btn text-white btn-outline-info  btn-sm my-2 my-sm-0 h-75" type="submit"><i class="material-icons">
@@ -75,6 +64,13 @@
                         </i></button>
                     </form>
                 </div>
+                <nav class="nav">
+                    <a class="nav-link active" href="#">Active</a>
+                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </nav>
+                <img src="../assets/img/bg-opciones.jpg" class="img-fluid w-100 " alt="Responsive image">
             </header>
             <div id="dw-s2" class="bmd-layout-drawer bg-faded" aria-expanded="false" aria-hidden="true">
                 <header class="img-menu img-fluid" style="background-image: url(../assets/img/bg-menu.jpg);" >
@@ -227,88 +223,79 @@
             </div>
             <div class="container pt-5 mt-5">
                 <div class="row justify-content-center">
-                    <div class="container pt-lg-5">
+                    <div class="container p-5">
                         <div class="row ">
-                            <div class="col-lg-3 text-center">
-                                <img class="rounded-circle" src="../assets/img/iconos/mantenimiento.png" alt="Generic placeholder image" width="140" height="140">
-                                <h2>Registro</h2>
-                                <p>
-                                    En esta sesion encontraremos informacion acerca del mantenimiento de las maquinaria.
-                                </p>
-                                <p>
-                                    <a class="btn btn-raised btn-danger" href="#" role="button">Ver más »</a>
-                                </p>
+                            <div class="col-3 text-center">
+                                <div class="pb-3">
+                                    <img class="rounded-circle img-fluid w-50" src="../assets/img/iconos/mantenimiento.png" alt="Generic placeholder image" >
+                                </div>
+                                <a class="  text-info" href="#">Registrar »</a>
+                            </div>
+                            
+                            <!-- /.col-lg-4 -->
+                            <div class="col-3 text-center">
+                                <div class="pb-3">
+                                    <img class="rounded-circle img-fluid w-50 " src="../assets/img/iconos/costo.png" alt="Generic placeholder image" >
+                                </div>
+                                <a class=" text-info" href="#" >Modificar »</a>
                             </div>
                             <!-- /.col-lg-4 -->
-                            <div class="col-lg-3 text-center">
-                                <img class="rounded-circle" src="../assets/img/iconos/costo.png" alt="Generic placeholder image" width="140" height="140">
-                                <h2>Costos</h2>
-                                <p>
-                                    Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
-                                </p>
-                                <p>
-                                    <a class="btn btn-secondary" href="#" role="button">View details »</a>
-                                </p>
+                            <div class="col-3 text-center">
+                                <div class="pb-3">
+                                    <img class="rounded-circle img-fluid w-50 " src="../assets/img/iconos/estadisticas.png" alt="Generic placeholder image" >
+                                </div>
+                                <a class=" text-info" href="#" >Eliminar »</a>
                             </div>
                             <!-- /.col-lg-4 -->
-                            <div class="col-lg-3 text-center">
-                                <img class="rounded-circle" src="../assets/img/iconos/estadisticas.png" alt="Generic placeholder image" width="140" height="140">
-                                <h2>Estadistica</h2>
-                                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                                <p>
-                                    <a class="btn btn-secondary" href="#" role="button">View details »</a>
-                                </p>
+                            <div class="col-3 text-center">
+                                <div class="pb-3">
+                                    <img class="rounded-circle img-fluid w-50 " src="../assets/img/iconos/tarea.png" alt="Generic placeholder image" >
+                                </div>
+                                <a class=" text-info" href="#" >Consultar »</a>
                             </div>
-                            <!-- /.col-lg-4 -->
-                            <div class="col-lg-3 text-center">
-                                <img class="rounded-circle" src="../assets/img/iconos/tarea.png" alt="Generic placeholder image" width="140" height="140">
-                                <h2>Tareas</h2>
-                                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                                <p>
-                                    <a class="btn btn-secondary" href="#" role="button">View details »</a>
-                                </p>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
             </div>
-            <footer class="footer">
-                <div class="container-fluid pt-lg-4" style="background-color:#279beb; ">
-                    <div class="row  ">
-                        <div class="col-4 text-white text-center">
-                            <h5>Contacto</h5>
-                            <p>Tel. 5798900</p>
-                        </div>
-                        <div class="col-4 text-white text-center">
-                            <h5>Direccion</h5>
-                            <p>Calle 32 # 45-67 Valledupar</p>
-                        </div>
-                        <div class="col-4 text-white text-center">
-                            <h5>Compartir</h5>
-                            <p>Contacto</p>
-                        </div>
-                    </div>
-                </div>
-                <div class=" row justify-content-center  bg-secondary-transcolba" style="">
-                    <div class="text-center py-3 text-white">
-                        ©
-                        <script>document.write(new Date().getFullYear())</script>
-                        Copyright
-                    </div>
-                </div>
-            </footer>
-            <!-- Optional JavaScript -->
-            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-            <script src="../assets/plugin/js/jquery-3.3.1.min.js" ></script>
-            <script src="../assets/plugin/js/jquery-3.3.1.slim.min.js" ></script>
-            <script src="../assets/plugin/js/popper.js"></script>
-            <script src="../assets/plugin/js/bootstrap-material-design.js"></script>
-            <script>
-            $(document).ready(function () {
-            $('body').bootstrapMaterialDesign();
-            });
-            </script>
-            
         </div>
-    </body>
+        <footer class="footer">
+            <div class="container-fluid pt-lg-4" style="background-color:#279beb; ">
+                <div class="row  ">
+                    <div class="col-4 text-white text-center">
+                        <h5>Contacto</h5>
+                        <p>Tel. 5798900</p>
+                    </div>
+                    <div class="col-4 text-white text-center">
+                        <h5>Direccion</h5>
+                        <p>Calle 32 # 45-67 Valledupar</p>
+                    </div>
+                    <div class="col-4 text-white text-center">
+                        <h5>Compartir</h5>
+                        <p>Contacto</p>
+                    </div>
+                </div>
+            </div>
+            <div class=" row justify-content-center  bg-secondary-transcolba" style="">
+                <div class="text-center py-3 text-white">
+                    ©
+                    <script>document.write(new Date().getFullYear())</script>
+                    Copyright
+                </div>
+            </div>
+        </footer>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="../assets/plugin/js/jquery-3.3.1.min.js" ></script>
+        <script src="../assets/plugin/js/jquery-3.3.1.slim.min.js" ></script>
+        <script src="../assets/plugin/js/popper.js"></script>
+        <script src="../assets/plugin/js/bootstrap-material-design.js"></script>
+        <script>
+        $(document).ready(function () {
+        $('body').bootstrapMaterialDesign();
+        });
+        </script>
+        
+    </div>
+</body>
 </html>
