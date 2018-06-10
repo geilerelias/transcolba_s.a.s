@@ -9,6 +9,7 @@
         <!-- Include Bootstrap CSS -->
         <link rel="stylesheet" type="text/css" href="../assets/plugin/css/bootstrap-material-design.css">
         <link rel="stylesheet" type="text/css" href="../assets/plugin/iconfont/material-icons.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
         <link rel="stylesheet" type="text/css" href="../assets/plugin/css/sweetalert2.css">
         <!--estilos propios---->
         <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
@@ -49,9 +50,10 @@
                                     Maquinaria
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">Registro</a>
-                                    <a class="dropdown-item" href="#">Modificar</a>
-                                    <a class="dropdown-item" href="#">Eliminar</a>
+                                    <a class="dropdown-item" href="maquinaria-registro.html">Registrar</a>
+                                    <a class="dropdown-item" href="maquinaria-modificar.html">Modificar</a>
+                                    <a class="dropdown-item" href="maquinaria-eliminar.html">Eliminar</a>
+                                     <a class="dropdown-item" href="maquinaria-consultar.html">Consultar</a>
                                 </div>
                             </li>
                             <li class="nav-item text-white">
@@ -227,18 +229,18 @@
                 </ul>
             </div>
             <div>
-                <ul class="nav" style="background-color: white;">
+                <ul class="nav nav-bg-transcolba" >
                     <li class="nav-item">
-                        <a class="nav-link text-capitalize text-transcolba" " href="#">Registrar</a>
+                        <a class="nav-link text-capitalize text-transcolba active-secundary-transcolba"  href="maquinaria-registro.html">Registrar</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-capitalize text-transcolba" href="#">Modificar</a>
+                        <a class="nav-link text-capitalize text-transcolba" href="maquinaria-modificar.html">Modificar</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-capitalize text-transcolba" href="#">Eliminar</a>
+                        <a class="nav-link text-capitalize text-transcolba" href="maquinaria-eliminar.html">Eliminar</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link  text-capitalize text-transcolba" href="#">Consultar</a>
+                        <a class="nav-link  text-capitalize text-transcolba" href="maquinaria-consultar.html">Consultar</a>
                     </li>
                 </ul>
             </div>
@@ -248,7 +250,7 @@
             <div class="container pt-5 mt-5">
                 <div class="row justify-content-center">
                     <div class="col-md-9 col-sm-6">
-                        <form action="MaquinariaRegistro_submit" method="get" accept-charset="utf-8">
+                        <form action="Maquina" method="get" accept-charset="utf-8">
                             <div class=" card encabezado" style="z-index: 0">
                                 <div class="title" style="background-image: url(../assets/img/camiones.jpg);">
                                     <span class="title-1">
@@ -260,7 +262,7 @@
                                         <div class="col-sm">
                                             <div class="form-group">
                                                 <label for="input-placa" class="bmd-label-floating">Placa</label>
-                                                <input type="text" class="form-control" id="input-placa" name="input-placa" required  aria-required="true">
+                                                <input type="text" class="form-control" id="input-placa" name="input-placa" required aria-required="true">
                                             </div>
                                         </div>
                                         <div class="col-sm">

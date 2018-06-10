@@ -139,3 +139,9 @@
 
   color: #0074c0;
 }
+.nav-bg-transcolba{
+  background-color: white;
+}
+.active-secundary-transcolba{
+  background-color: #dcdcdc !important;
+  }
