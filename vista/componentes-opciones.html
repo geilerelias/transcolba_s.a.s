@@ -30,7 +30,7 @@
                 <!---------NAVBAR----------------------------->
                 <div class="navbar navbar-light bg-faded shadow row" id="navbar" data-spy="affix" data-offset-top="197" style="background-color: #0074c0;">
                     <div class="col-2">
-                        <button class="navbar-toggler  text-white btn-outline-info" type="button" data-toggle="drawer" data-target="#dw-s2" aria-expanded="false">
+                        <button class="navbar-toggler  text-white btn bmd-btn-icon btn-raised" type="button" data-toggle="drawer" data-target="#dw-s2" aria-expanded="false">
                         <span class="sr-only">Toggle drawer</span>
                         <i class="material-icons">menu</i>
                         </button>
@@ -44,11 +44,11 @@
                                     <a class="nav-link text-white text-capitalize" href="prueba.html">Inicio</a>
                                 </li>
                                 <li class="nav-item " >
-                                    <a class="nav-link text-white text-capitalize" href="#">Maquinaria</a>
+                                    <a class="nav-link text-white text-capitalize " href="maquinaria-opciones.html">Maquinaria</a>
                                 </li>
                             </li>
                             <li class="nav-item text-white">
-                                <a class="nav-link text-white text-capitalize" href="componentes-opciones.html">Componentes</a>
+                                <a class="nav-link text-white text-capitalize nav-active-transcolba" href="componentes-opciones.html">Componentes</a>
                             </li>
                             <li class="nav-item text-white">
                                 <a class="nav-link text-white text-capitalize" href="insidencias-registrar.html">Insidencias</a>
@@ -60,10 +60,16 @@
                     </div>
                     
                     <form class="form-inline float-right pr-2">
-                        <input class="form-control form-control-sm mr-sm-2 input-search"   type="search" placeholder="Buscar" aria-label="Search">
-                        <button class="btn text-white   btn-sm my-2 my-sm-0 h-75 btn-xs" type="submit"><i class="material-icons">
-                        search
-                        </i></button>
+                        <div class="row">
+                            <button type="button" class="btn bmd-btn-icon btn-raised text-white mr-2">
+                            <i  class="material-icons ">notifications</i>
+                            </button>
+                            <input class="form-control form-control-sm mr-sm-2 input-search"   type="search" placeholder="Buscar" aria-label="Search">
+                            <button class="btn  bmd-btn-icon text-white mr-2" type="button"><i class="material-icons">
+                            search
+                            </i>
+                            </button>
+                        </div>
                     </form>
                 </div>
             </header>
@@ -144,7 +150,7 @@
                         <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="#">
                             <div class="row">
                                 <div class="col-1">
-                                    <i  class="material-icons ">notifications_active</i>
+                                    <i  class="material-icons ">notifications</i>
                                 </div>
                                 <div class="col-3 pt-1">
                                     Notificaciones
@@ -233,16 +239,14 @@
                 </ul>
             </div>
             
-        </div>
-        <!------------------- FIN CABECERA----------------------------------->
-        <!-----------------------------CONTENIDO--------------->
-        <div class="">
-            <img src="../assets/img/bg-componentes.jpg" class="img-fluid w-100">
-        </div>
-        <div class="container pt-5 mt-5">
-            <div class="row justify-content-center">
-                <div class="container pt-2">
-                    <div class="row ">
+            <!------------------- FIN CABECERA----------------------------------->
+            <!-----------------------------CONTENIDO--------------->
+            <div class="">
+                <img src="../assets/img/bg-componentes.jpg" class="img-fluid w-100" style="z-index: -20">
+            </div>
+            <div class="container pt-5 mt-5">
+                <div class="row justify-content-center">
+                    <div class="container pt-2">
                         <div class="col-8 col-sm-4 text-center">
                             <div class="pb-3">
                                 <img class="rounded-circle img-fluid w-50" src="../assets/img/iconos/icon-registrar-componente.png" alt="Generic placeholder image">
@@ -277,52 +281,52 @@
                         </div>
                         <div class="pb-5">
                             <a class="btn-link text-info pb-5" href="" >Eliminar »</a>
-                        </div>
+                        </div-->
+                        <!-- /.col-lg-4 -->
                         
-                    </div-->
-                    <!-- /.col-lg-4 -->
-                    <div class="col-8 col-sm-4 text-center">
-                        <div class="pb-3">
-                            <img class="rounded-circle img-fluid w-50" src="../assets/img/iconos/icon-consultar-componente.png" alt="Generic placeholder image">
-                            <p class="">
-                                En esta sesión podra realizar desde unas consulta individual hasta una general de todos sus registros de maquinas y equipos automotrices.
-                            </p>
+                        <div class="col-8 col-sm-4 text-center">
+                            <div class="pb-3">
+                                <img class="rounded-circle img-fluid w-50" src="../assets/img/iconos/icon-consultar-componente.png" alt="Generic placeholder image">
+                                <p class="">
+                                    En esta sesión podra realizar desde unas consulta individual hasta una general de todos sus registros de maquinas y equipos automotrices.
+                                </p>
+                            </div>
+                            <div class="pb-5" >
+                                <a class="btn-link text-info pb-lg-5" href="maquinaria-consultar.html" >Consultar »</a>
+                            </div>
+                            
                         </div>
-                        <div class="pb-5" >
-                            <a class="btn-link text-info pb-lg-5" href="maquinaria-consultar.html" >Consultar »</a>
-                        </div>
-                        
                     </div>
                 </div>
             </div>
         </div>
+        <!--------------------FOOTER-------------->
+        <footer class="footer">
+            <div class="container-fluid pt-lg-4" style="background-color:#279beb; ">
+                <div class="row  ">
+                    <div class="col-4 text-white text-center">
+                        <h6>Contacto</h6>
+                        <p>Tel. 5798900</p>
+                    </div>
+                    <div class="col-4 text-white text-center">
+                        <h6>Direccion</h6>
+                        <p>Calle 32 # 45-67 Valledupar</p>
+                    </div>
+                    <div class="col-4 text-white text-center">
+                        <h6>Más Información</h6>
+                        <a href="https://grupocolba.com.co/transcolba/"  class="text-white">Transcolba s.a.s</a>
+                    </div>
+                </div>
+            </div>
+            <div class="justify-content-center  bg-secondary-transcolba" style="">
+                <div class="text-center py-3 text-white">
+                    ©
+                    <script>document.write(new Date().getFullYear())</script>
+                    Copyright
+                </div>
+            </div>
+        </footer>
     </div>
-    <!--------------------FOOTER-------------->
-    <footer class="footer">
-        <div class="container-fluid pt-lg-4" style="background-color:#279beb; ">
-            <div class="row  ">
-                <div class="col-4 text-white text-center">
-                    <h6>Contacto</h6>
-                    <p>Tel. 5798900</p>
-                </div>
-                <div class="col-4 text-white text-center">
-                    <h6>Direccion</h6>
-                    <p>Calle 32 # 45-67 Valledupar</p>
-                </div>
-                <div class="col-4 text-white text-center">
-                    <h6>Más Información</h6>
-                    <a href="https://grupocolba.com.co/transcolba/"  class="text-white">Transcolba s.a.s</a>
-                </div>
-            </div>
-        </div>
-        <div class="justify-content-center  bg-secondary-transcolba" style="">
-            <div class="text-center py-3 text-white">
-                ©
-                <script>document.write(new Date().getFullYear())</script>
-                Copyright
-            </div>
-        </div>
-    </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="../assets/plugin/js/jquery-3.3.1.min.js" ></script>
@@ -335,6 +339,5 @@
     });
     </script>
     
-</div>
 </body>
 </html>
