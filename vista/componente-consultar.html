@@ -10,6 +10,7 @@
         
         <!-- Include Bootstrap CSS -->
         <link rel="stylesheet" type="text/css" href="../assets/plugin/css/bootstrap-material-design.css">
+
         <!--data tables .net -->
         <link rel="stylesheet" href="../assets/plugin/css/dataTables.bootstrap4.min.css">
         <link rel="stylesheet" href="../assets/plugin/css/select.bootstrap4.min.css">
@@ -52,11 +53,11 @@
                                 <a class="nav-link text-white text-capitalize" href="prueba.html">Inicio</a>
                             </li>
                             <li class="nav-item " >
-                                <a class="nav-link text-white text-capitalize nav-active-transcolba" href="maquinaria-opciones.html">Maquinaria</a>
+                                <a class="nav-link text-white text-capitalize " href="maquinaria-opciones.html">Maquinaria</a>
                             </li>
                         </li>
                         <li class="nav-item text-white">
-                            <a class="nav-link text-white text-capitalize" href="componentes-opciones.html">Componentes</a>
+                            <a class="nav-link text-white text-capitalize nav-active-transcolba" href="componentes-opciones.html">Componentes</a>
                         </li>
                         <li class="nav-item text-white">
                             <a class="nav-link text-white text-capitalize" href="insidencias-registrar.html">Insidencias</a>
@@ -67,18 +68,18 @@
                     </ul>
                 </div>
                 
-                <form class="form-inline float-right pr-2">
-                    <div class="row">
-                        <button type="button" class="btn bmd-btn-icon btn-raised text-white mr-2">
-                        <i  class="material-icons ">notifications</i>
-                        </button>
-                        <input class="form-control form-control-sm mr-sm-2 input-search"   type="search" placeholder="Buscar" aria-label="Search">
-                        <button class="btn  bmd-btn-icon text-white mr-2" type="button"><i class="material-icons">
-                        search
-                        </i>
-                        </button>
-                    </div>
-                </form>
+                 <form class="form-inline float-right pr-2">
+                        <div class="row">
+                            <button type="button" class="btn bmd-btn-icon btn-raised text-white mr-2">
+                            <i  class="material-icons ">notifications</i>
+                            </button>
+                            <input class="form-control form-control-sm mr-sm-2 input-search"   type="search" placeholder="Buscar" aria-label="Search">
+                            <button class="btn  bmd-btn-icon text-white mr-2" type="button"><i class="material-icons">
+                            search
+                            </i>
+                            </button>
+                        </div>
+                    </form>
             </div>
         </header>
         <!---------- DRAWER-------->
@@ -242,7 +243,7 @@
                     <a class="nav-link text-capitalize text-transcolba " href="maquinaria-modificar.html">Modificar</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link  text-capitalize text-transcolba" href="maquinaria-consultar.html">Consultar</a>
+                    <a class="nav-link  text-capitalize text-transcolba  active-secundary-transcolba" href="maquinaria-consultar.html">Consultar</a>
                 </li>
             </ul>
         </div>
@@ -255,7 +256,7 @@
                         <div class=" card encabezado" style="z-index: 0">
                             <div class="title" style="background-image: url(../assets/img/camiones.jpg);">
                                 <span class="title-1">
-                                    Consultar Maquinarias
+                                    Consultar Componentes
                                 </span>
                             </div>
                             <div class="card-body" style="width: auto !important;">
@@ -781,12 +782,12 @@
         <script src="../assets/plugin/js/jquery.dataTables.min.js"></script>
         <script src="../assets/plugin/js/dataTables.bootstrap4.min.js" ></script>
         
-        
+     
         
         <script>
         $(document).ready(function() {
-        $('body').bootstrapMaterialDesign();
-        $('#example').DataTable();
+            $('body').bootstrapMaterialDesign();
+            $('#example').DataTable();
         } );
         </script>
         
