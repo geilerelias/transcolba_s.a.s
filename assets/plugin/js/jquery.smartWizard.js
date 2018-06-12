@@ -160,7 +160,7 @@
             }
 
             // Create the toolbar buttons
-            var btnFinish = this.options.toolbarSettings.showNextButton !== false ? $('<button></button>').text(this.options.lang.save).addClass('btn btn-primary sw-btn-finish').attr('type', 'button') : null;
+            var btnFinish = this.options.toolbarSettings.showNextButton !== false ? $('<button></button>').text(this.options.lang.save).addClass('btn btn-primary sw-btn-finish').attr('type', 'submit') : null;
             var btnNext = this.options.toolbarSettings.showNextButton !== false ? $('<button></button>').text(this.options.lang.next).addClass('btn btn-secondary sw-btn-next').attr('type', 'button') : null;
             var btnNextDiv = $('<div></div>').addClass('ml-auto').append(btnNext,btnFinish);
 
