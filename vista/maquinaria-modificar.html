@@ -3,16 +3,16 @@
     <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
-        <link href="assets/img/favicon-32x32.png" rel="shortcut icon">
+        <link href="../assets/img/favicon-32x32.png" rel="shortcut icon">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Registro de Maquinaria</title>
+        <title>Modificar Maquinaria</title>
         <!-- Include Bootstrap CSS -->
-        <link rel="stylesheet" type="text/css" href="assets/plugin/css/bootstrap-material-design.css">
-        <link rel="stylesheet" type="text/css" href="assets/plugin/iconfont/material-icons.css">
+        <link rel="stylesheet" type="text/css" href="../assets/plugin/css/bootstrap-material-design.css">
+        <link rel="stylesheet" type="text/css" href="../assets/plugin/iconfont/material-icons.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
-        <link rel="stylesheet" type="text/css" href="assets/plugin/css/sweetalert2.css">
+        <link rel="stylesheet" type="text/css" href="../assets/plugin/css/sweetalert2.css">
         <!--estilos propios---->
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
     </head>
     <body>
         <div class="bmd-layout-container bmd-drawer-f-l bmd-drawer-overlay">
@@ -25,7 +25,7 @@
                         </h5>
                     </div>
                     <div class="col-4 pt-1">
-                        <img src="assets/img/logo-transcolba.png" class="img-fluid float-right"  alt="Responsive image" >
+                        <img src="../assets/img/logo-transcolba.png" class="img-fluid float-right"  alt="Responsive image" >
                     </div>
                 </div>
                 <!---------NAVBAR----------------------------->
@@ -69,7 +69,7 @@
         </header>
         <!---------- DRAWER-------->
         <div id="dw-s2" class="bmd-layout-drawer bg-faded" aria-expanded="false" aria-hidden="true">
-            <header class="img-menu img-fluid" style="background-image: url(assets/img/bg-menu.jpg);" >
+            <header class="img-menu img-fluid" style="background-image: url(../assets/img/bg-menu.jpg);" >
                 <img id="imagen-usuario" name="imagen-usuario" data-src="holder.js/75x75" class="rounded-circle " alt="75x75" src="" data-holder-rendered="true" style="width: 75px; height: 75px;"  >
                 <a class="navbar-brand title-1 text-white text-capitalize "> <small>Nombre de usuario</small> </a>
             </header>
@@ -222,10 +222,10 @@
         <div>
             <ul class="nav nav-bg-transcolba" >
                 <li class="nav-item">
-                    <a class="nav-link text-capitalize text-transcolba active-secundary-transcolba"  href="maquinaria-registro.html">Registrar</a>
+                    <a class="nav-link text-capitalize text-transcolba "  href="maquinaria-registro.html">Registrar</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-capitalize text-transcolba" href="maquinaria-modificar.html">Modificar</a>
+                    <a class="nav-link text-capitalize text-transcolba active-secundary-transcolba" href="maquinaria-modificar.html">Modificar</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link  text-capitalize text-transcolba" href="maquinaria-consultar.html">Consultar</a>
@@ -240,9 +240,9 @@
                 <div class="col-md-9 col-sm-6">
                     <form action="Maquina" method="get" accept-charset="utf-8">
                         <div class=" card encabezado" style="z-index: 0">
-                            <div class="title" style="background-image: url(assets/img/camiones.jpg);">
+                            <div class="title" style="background-image: url(../assets/img/camiones.jpg);">
                                 <span class="title-1">
-                                    Registro de Maquinas
+                                    Modificar Maquinaria
                                 </span>
                             </div>
                             <div class="card-body ">
@@ -250,7 +250,7 @@
                                     <div class="col-sm">
                                         <div class="form-group">
                                             <label for="input-placa" class="bmd-label-floating">Placa</label>
-                                            <input type="text" class="form-control" id="input-placa" name="input-placa" required aria-required="true">
+                                            <input type="text" class="form-control" id="input-placa" name="input-placa" disabled aria-required="true">
                                         </div>
                                     </div>
                                     <div class="col-sm">
@@ -302,7 +302,7 @@
                                 </div>
                             </div>
                             <div class="card-footer text-right">
-                                <button type="submit" class="btn btn-raised btn-info">Guardar</button>
+                                <button type="submit" class="btn btn-raised btn-info">Modificar</button>
                             </div>
                         </div>
                     </form>
@@ -337,10 +337,10 @@
         </footer>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="assets/plugin/js/jquery-3.3.1.min.js" ></script>
-        <script src="assets/plugin/js/jquery-3.3.1.slim.min.js" ></script>
-        <script src="assets/plugin/js/popper.js"></script>
-        <script src="assets/plugin/js/bootstrap-material-design.js"></script>
+        <script src="../assets/plugin/js/jquery-3.3.1.min.js" ></script>
+        <script src="../assets/plugin/js/jquery-3.3.1.slim.min.js" ></script>
+        <script src="../assets/plugin/js/popper.js"></script>
+        <script src="../assets/plugin/js/bootstrap-material-design.js"></script>
         <script>
         $(document).ready(function () {
         $('body').bootstrapMaterialDesign();
