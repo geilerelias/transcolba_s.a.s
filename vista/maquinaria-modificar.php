@@ -423,12 +423,23 @@
             </ul>
         </div>
         
+<?php
+
+include_once("conexion.php");
+
+$placa= mysqli_real_escape_string($mysqli, $_POST['input-placa']); 
+$result = mysqli_query($mysqli, " SELECT * FROM maquinaria WHERE placa=$placa");
+
+
+
+?>
+
         <!------------------- FIN CABECERA----------------------------------->
         <!------CONTENIDO--------------->
         <div class="container pt-5 mt-5">
             <div class="row justify-content-center">
                 <div class="col-md-9 col-sm-6">
-                    <form action="Maquina" method="get" accept-charset="utf-8">
+                    <form action="../includes/maquinaria-modificar.php" method="POST" accept-charset="utf-8">
                         <div class=" card encabezado" style="z-index: 0">
                             <div class="title" style="background-image: url(../assets/img/camiones.jpg);">
                                 <span class="title-1">
@@ -492,7 +503,7 @@
                                 </div>
                             </div>
                             <div class="card-footer text-right">
-                                <button type="submit" class="btn btn-raised btn-info">Modificar</button>
+                                <button type="submit" name="btn-modificar" class="btn btn-raised btn-info">Modificar</button>
                             </div>
                         </div>
                     </form>

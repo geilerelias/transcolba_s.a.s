@@ -1,24 +1,29 @@
 <?php
-include_once("configbd.php");
-if(isset($_POST['Update']))
+include_once("conexion.php");
+if(isset($_POST['btn-modificar']))
 { 
-  $id = mysqli_real_escape_string($mysqli, $_POST['id']);
-  $notas = mysqli_real_escape_string($mysqli, $_POST['notas']);
 
-    
-    $result = mysqli_query($mysqli, "UPDATE apuntes SET notas='$notas' WHERE id=$id");
+ $placa = mysqli_real_escape_string($mysqli, $_POST['input-placa']);  
+$marca=mysqli_real_escape_string($mysqli, $_POST['input-marca']); 
+$linea=mysqli_real_escape_string($mysqli, $_POST['input-linea']); 
+$modelo=mysqli_real_escape_string($mysqli, $_POST['input-modelo']); 
+$color=mysqli_real_escape_string($mysqli, $_POST['input-color']); 
+$fecha=mysqli_real_escape_string($mysqli, $_POST['input-fecha']); 
+$chasis=mysqli_real_escape_string($mysqli, $_POST['input-chasis']); 
+$motor=mysqli_real_escape_string($mysqli, $_POST['input-motor']); 
+ 
 
-    header("Location: listar.php");
+    "UPDATE maquinaria SET placa=$placa,marca=$marca,modelo=$linea,linea=$modelo,color=$color,fecha_adquicision=$fecha, chasis=$chasis, motor=$motor WHERE placa=$placa"
+    $result = mysqli_query($mysqli, " UPDATE maquinaria SET placa=$placa,marca=$marca,modelo=$linea,linea=$modelo,color=$color,fecha_adquicision=$fecha, chasis=$chasis, motor=$motor WHERE placa=$placa");
+
+echo'<script type="text/javascript">
+alert("Informacion Actualizada con exito.");
+</script>'
+
+    header("Location:maquinaria-consultar.php");
 
 }
 ?>
 
-<?php
-$id = $_GET['id'];
-$result = mysqli_query($mysqli, "SELECT * FROM apuntes WHERE id=$id");
-while($res = mysqli_fetch_array($result))
-{
-  $notas = $res['notas'];
-}
-?>
+
 
