@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <link href="../assets/img/favicon-32x32.png" rel="shortcut icon">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Registro de Maquinaria</title>
+        <title>Modificar Maquinaria</title>
         <!-- Include Bootstrap CSS -->
         <link rel="stylesheet" type="text/css" href="../assets/plugin/css/bootstrap-material-design.css">
         <link rel="stylesheet" type="text/css" href="../assets/plugin/iconfont/material-icons.css">
@@ -39,437 +39,655 @@
                     
                     
                     <div class="d-none d-sm-block row justify-content-center ">
-                        <ul class="nav flex-column flex-nowrap pt-3">
+                        <ul class="nav col-12">
+                            <li class="nav-item " >
+                                <a class="nav-link text-white text-capitalize" href="index.html" >Inicio</a>
+                            </li>
+                            <li class="nav-item " >
+                                <a class="nav-link text-white text-capitalize nav-active-transcolba" href="maquinaria-opciones.html">Maquinaria</a>
+                            </li>
+                        </li>
+                        <li class="nav-item text-white">
+                            <a class="nav-link text-white text-capitalize" href="componentes-opciones.html">Componentes</a>
+                        </li>
+                        <li class="nav-item text-white">
+                            <a class="nav-link text-white text-capitalize" href="insidencias-registrar.html">Insidencias</a>
+                        </li>
+                        <li class="nav-item text-white">
+                            <a class="nav-link text-white text-capitalize" href="index.html">Salir</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <form class="form-inline float-right pr-2">
+                    <input class="form-control form-control-sm mr-sm-2 input-search"   type="search" placeholder="Buscar" aria-label="Search">
+                    <button class="btn text-white   btn-sm my-2 my-sm-0 h-75 btn-xs" type="submit"><i class="material-icons">
+                    search
+                    </i></button>
+                </form>
+            </div>
+        </header>
+        <!---------- DRAWER-------->
+        <div id="dw-s2" class="bmd-layout-drawer bg-faded" aria-expanded="false" aria-hidden="true">
+            <header class="img-menu img-fluid" style="background-image: url(../assets/img/bg-menu.jpg);" >
+                <img id="imagen-usuario" name="imagen-usuario" data-src="holder.js/75x75" class="rounded-circle " alt="75x75" src="" data-holder-rendered="true" style="width: 75px; height: 75px;"  >
+                <a class="navbar-brand title-1 text-white text-capitalize "> <small>Nombre de usuario</small> </a>
+            </header>
+            <ul class="nav flex-column flex-nowrap pt-3">
+                <li class="nav-item">
+                    <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center collapse" href="#" data-toggle="collapse" data-target="#menu-maquinaria">
+                        <div class="row">
+                            <div class="col-1">
+                                <i class="material-icons">
+                                local_shipping
+                                </i>
+                                
+                            </div>
+                            <div class="col-3 pt-1">
+                                Maquinaria
+                            </div>
+                        </div>
+                    </a>
+                    <div class="collapse" id="menu-maquinaria" aria-expanded="false">
+                        <ul class="flex-column pl-2 nav">
                             <li class="nav-item">
-                                <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center collapse" href="#" data-toggle="collapse" data-target="#menu-maquinaria">
+                                <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="#">
                                     <div class="row">
+                                        
                                         <div class="col-1">
                                             <i class="material-icons">
-                                            local_shipping
+                                            add
                                             </i>
                                             
                                         </div>
                                         <div class="col-3 pt-1">
-                                            Maquinaria
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="collapse" id="menu-maquinaria" aria-expanded="false">
-                                    <ul class="flex-column pl-2 nav">
-                                        <li class="nav-item">
-                                            <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="#">
-                                                <div class="row">
-                                                    
-                                                    <div class="col-1">
-                                                        <i class="material-icons">
-                                                        add
-                                                        </i>
-                                                        
-                                                    </div>
-                                                    <div class="col-3 pt-1">
-                                                        <small>Registrar</small>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="maquinaria-modificar.html">
-                                                <div class="row">
-                                                    <div class="col-1">
-                                                        <i  class="material-icons ">create</i>
-                                                    </div>
-                                                    <div class="col-3 pt-1">
-                                                        <small> Modificar</small>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="maquinaria-consultar.html">
-                                                <div class="row">
-                                                    <div class="col-1">
-                                                        <i  class="material-icons ">search</i>
-                                                    </div>
-                                                    <div class="col-3 pt-1">
-                                                        <small> Consultar </small>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                                <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center collapse" href="#" data-toggle="collapse" data-target="#menu-componente">
-                                    <div class="row">
-                                        <div class="col-1">
-                                            <i  class="material-icons ">picture_in_picture_alt
-                                            </i>
-                                        </div>
-                                        <div class="col-3 pt-1">
-                                            Componentes
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="collapse" id="menu-componente" aria-expanded="false">
-                                    <ul class="flex-column pl-2 nav">
-                                        <li class="nav-item">
-                                            <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="componente-registro.html">
-                                                <div class="row">
-                                                    <div class="col-1">
-                                                        <i  class="material-icons ">add</i>
-                                                    </div>
-                                                    <div class="col-3 pt-1">
-                                                        <small>Registrar</small>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="componente-modificar.html">
-                                                <div class="row">
-                                                    <div class="col-1">
-                                                        <i  class="material-icons ">create</i>
-                                                    </div>
-                                                    <div class="col-3 pt-1">
-                                                        <small> Modificar</small>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="componente-consultar.html">
-                                                <div class="row">
-                                                    <div class="col-1">
-                                                        <i  class="material-icons ">search</i>
-                                                    </div>
-                                                    <div class="col-3 pt-1">
-                                                        <small> Consultar </small>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                                <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="insidencia-agregar.html">
-                                    <div class="row">
-                                        <div class="col-1">
-                                            <i  class="material-icons ">fiber_new
-                                            </i>
-                                        </div>
-                                        <div class="col-3 pt-1">
-                                            Incidencias
+                                            <small>Registrar</small>
                                         </div>
                                     </div>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="estadisticas.html">
+                                <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="maquinaria-modificar.html">
                                     <div class="row">
                                         <div class="col-1">
-                                            <i class="material-icons">
-                                            insert_chart
-                                            </i>
+                                            <i  class="material-icons ">create</i>
                                         </div>
                                         <div class="col-3 pt-1">
-                                            Estadisticas
+                                            <small> Modificar</small>
                                         </div>
                                     </div>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center collapse" href="#" data-toggle="collapse" data-target="#menu-reporte">
+                                <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="maquinaria-consultar.html">
                                     <div class="row">
                                         <div class="col-1">
-                                            <i  class="material-icons ">description</i>
+                                            <i  class="material-icons ">search</i>
                                         </div>
                                         <div class="col-3 pt-1">
-                                            Reportes
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="collapse" id="menu-reporte" aria-expanded="false">
-                                    <ul class="flex-column pl-2 nav">
-                                        <li class="nav-item">
-                                            <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="reporte-combustible.html">
-                                                <div class="row">
-                                                    <div class="col-1">
-                                                        <i  class="material-icons ">local_gas_station</i>
-                                                    </div>
-                                                    <div class="col-3 pt-1">
-                                                        <small> Combustible por Maquinaria</small>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="reporte-daños.html">
-                                                <div class="row">
-                                                    <div class="col-1">
-                                                        <i  class="material-icons ">build</i>
-                                                    </div>
-                                                    <div class="col-3 pt-1">
-                                                        <small> Daños y fallas</small>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="reporte-gastos.html">
-                                                <div class="row">
-                                                    <div class="col-1">
-                                                        <i  class="material-icons ">monetization_on</i>
-                                                    </div>
-                                                    <div class="col-3 pt-1">
-                                                        <small> Gastos monetarios </small>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                                <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="notificaciones.html">
-                                    <div class="row">
-                                        <div class="col-1">
-                                            <i  class="material-icons ">notifications</i>
-                                        </div>
-                                        <div class="col-3 pt-1">
-                                            Notificaciones
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center collapse" href="#" data-toggle="collapse" data-target="#submenu1">
-                                    <div class="row">
-                                        <div class="col-1">
-                                            <i  class="material-icons ">assignment_turned_in</i>
-                                        </div>
-                                        <div class="col-3 pt-1">
-                                            Tareas
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="collapse" id="submenu1" aria-expanded="false">
-                                    <ul class="flex-column pl-2 nav">
-                                        <li class="nav-item">
-                                            <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="tarea-agregar.html">
-                                                <div class="row">
-                                                    <div class="col-1">
-                                                        <i  class="material-icons ">assignment_returned</i>
-                                                    </div>
-                                                    <div class="col-3 pt-1">
-                                                        <small> Crear</small>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="tarea-modificar.html">
-                                                <div class="row">
-                                                    <div class="col-1">
-                                                        <i  class="material-icons ">assignment_return</i>
-                                                    </div>
-                                                    <div class="col-3 pt-1">
-                                                        <small>Modificar</small>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="tarea-estado.html">
-                                                <div class="row">
-                                                    <div class="col-1">
-                                                        <i  class="material-icons ">assignment</i>
-                                                    </div>
-                                                    <div class="col-3 pt-1">
-                                                        <small>Estado</small>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                                <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="../index.html">
-                                    <div class="row">
-                                        <div class="col-1">
-                                            <i  class="material-icons ">clear
-                                            </i>
-                                        </div>
-                                        <div class="col-3 pt-1">
-                                            Salir
+                                            <small> Consultar </small>
                                         </div>
                                     </div>
                                 </a>
                             </li>
                         </ul>
                     </div>
-                    
-                    <form class="form-inline float-right pr-2">
-                        <input class="form-control form-control-sm mr-sm-2 input-search"   type="search" placeholder="Buscar" aria-label="Search">
-                        <button class="btn text-white   btn-sm my-2 my-sm-0 h-75 btn-xs" type="submit"><i class="material-icons">
-                        search
-                        </i></button>
-                    </form>
-                </div>
-            </header>
+                </li>
+                <li class="nav-item">
+                    <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center collapse" href="#" data-toggle="collapse" data-target="#menu-componente">
+                        <div class="row">
+                            <div class="col-1">
+                                <i  class="material-icons ">picture_in_picture_alt
+                                </i>
+                            </div>
+                            <div class="col-3 pt-1">
+                                Componentes
+                            </div>
+                        </div>
+                    </a>
+                    <div class="collapse" id="menu-componente" aria-expanded="false">
+                        <ul class="flex-column pl-2 nav">
+                            <li class="nav-item">
+                                <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="componente-registro.html">
+                                    <div class="row">
+                                        <div class="col-1">
+                                            <i  class="material-icons ">add</i>
+                                        </div>
+                                        <div class="col-3 pt-1">
+                                            <small>Registrar</small>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="componente-modificar.html">
+                                    <div class="row">
+                                        <div class="col-1">
+                                            <i  class="material-icons ">create</i>
+                                        </div>
+                                        <div class="col-3 pt-1">
+                                            <small> Modificar</small>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="componente-consultar.html">
+                                    <div class="row">
+                                        <div class="col-1">
+                                            <i  class="material-icons ">search</i>
+                                        </div>
+                                        <div class="col-3 pt-1">
+                                            <small> Consultar </small>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="insidencia-agregar.html">
+                        <div class="row">
+                            <div class="col-1">
+                                <i  class="material-icons ">fiber_new
+                                </i>
+                            </div>
+                            <div class="col-3 pt-1">
+                                Incidencias
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="estadisticas.html">
+                        <div class="row">
+                            <div class="col-1">
+                                <i class="material-icons">
+                                insert_chart
+                                </i>
+                            </div>
+                            <div class="col-3 pt-1">
+                                Estadisticas
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center collapse" href="#" data-toggle="collapse" data-target="#menu-reporte">
+                        <div class="row">
+                            <div class="col-1">
+                                <i  class="material-icons ">description</i>
+                            </div>
+                            <div class="col-3 pt-1">
+                                Reportes
+                            </div>
+                        </div>
+                    </a>
+                    <div class="collapse" id="menu-reporte" aria-expanded="false">
+                        <ul class="flex-column pl-2 nav">
+                            <li class="nav-item">
+                                <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="reporte-combustible.html">
+                                    <div class="row">
+                                        <div class="col-1">
+                                            <i  class="material-icons ">local_gas_station</i>
+                                        </div>
+                                        <div class="col-3 pt-1">
+                                            <small> Combustible por Maquinaria</small>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="reporte-daños.html">
+                                    <div class="row">
+                                        <div class="col-1">
+                                            <i  class="material-icons ">build</i>
+                                        </div>
+                                        <div class="col-3 pt-1">
+                                            <small> Daños y fallas</small>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="reporte-gastos.html">
+                                    <div class="row">
+                                        <div class="col-1">
+                                            <i  class="material-icons ">monetization_on</i>
+                                        </div>
+                                        <div class="col-3 pt-1">
+                                            <small> Gastos monetarios </small>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="notificaciones.html">
+                        <div class="row">
+                            <div class="col-1">
+                                <i  class="material-icons ">notifications</i>
+                            </div>
+                            <div class="col-3 pt-1">
+                                Notificaciones
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center collapse" href="#" data-toggle="collapse" data-target="#submenu1">
+                        <div class="row">
+                            <div class="col-1">
+                                <i  class="material-icons ">assignment_turned_in</i>
+                            </div>
+                            <div class="col-3 pt-1">
+                                Tareas
+                            </div>
+                        </div>
+                    </a>
+                    <div class="collapse" id="submenu1" aria-expanded="false">
+                        <ul class="flex-column pl-2 nav">
+                            <li class="nav-item">
+                                <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="tarea-agregar.html">
+                                    <div class="row">
+                                        <div class="col-1">
+                                            <i  class="material-icons ">assignment_returned</i>
+                                        </div>
+                                        <div class="col-3 pt-1">
+                                            <small> Crear</small>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="tarea-modificar.html">
+                                    <div class="row">
+                                        <div class="col-1">
+                                            <i  class="material-icons ">assignment_return</i>
+                                        </div>
+                                        <div class="col-3 pt-1">
+                                            <small>Modificar</small>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="tarea-estado.html">
+                                    <div class="row">
+                                        <div class="col-1">
+                                            <i  class="material-icons ">assignment</i>
+                                        </div>
+                                        <div class="col-3 pt-1">
+                                            <small>Estado</small>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="../index.html">
+                        <div class="row">
+                            <div class="col-1">
+                                <i  class="material-icons ">clear
+                                </i>
+                            </div>
+                            <div class="col-3 pt-1">
+                                Salir
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            
+        </div>
             <!---------- DRAWER-------->
             <div id="dw-s2" class="bmd-layout-drawer bg-faded" aria-expanded="false" aria-hidden="true">
-                <header class="img-menu img-fluid" style="background-image: url(../assets/img/bg-menu.jpg);" >
-                    <img id="imagen-usuario" name="imagen-usuario" data-src="holder.js/75x75" class="rounded-circle " alt="75x75" src="" data-holder-rendered="true" style="width: 75px; height: 75px;"  >
-                    <a class="navbar-brand title-1 text-white text-capitalize "> <small>Nombre de usuario</small> </a>
-                </header>
-                <ul class="nav flex-column flex-nowrap pt-3">
-                    <li class="nav-item">
-                        <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="#">
-                            <div class="row">
-                                <div class="col-1">
-                                    <i class="material-icons">
-                                    insert_chart
-                                    </i>
-                                </div>
-                                <div class="col-3 pt-1">
-                                    Estadisticas
-                                </div>
+               <header class="img-menu img-fluid" style="background-image: url(../assets/img/avatar.png);" >
+                <img id="imagen-usuario" name="imagen-usuario" data-src="holder.js/75x75" class="rounded-circle " alt="75x75" src="" data-holder-rendered="true" style="width: 75px; height: 75px;"  >
+                <a class="navbar-brand title-1 text-white text-capitalize "> <small>Nombre de usuario</small> </a>
+            </header>
+            <ul class="nav flex-column flex-nowrap pt-3">
+                <li class="nav-item">
+                    <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center collapse" href="#" data-toggle="collapse" data-target="#menu-maquinaria">
+                        <div class="row">
+                            <div class="col-1">
+                                <i class="material-icons">
+                                local_shipping
+                                </i>
+                                
                             </div>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center collapse" href="#" data-toggle="collapse" data-target="#menu-reporte">
-                            <div class="row">
-                                <div class="col-1">
-                                    <i  class="material-icons ">description</i>
-                                </div>
-                                <div class="col-3 pt-1">
-                                    Reportes
-                                </div>
+                            <div class="col-3 pt-1">
+                                Maquinaria
                             </div>
-                        </a>
-                        <div class="collapse" id="menu-reporte" aria-expanded="false">
-                            <ul class="flex-column pl-2 nav">
-                                <li class="nav-item">
-                                    <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="#">
-                                        <div class="row">
-                                            <div class="col-1">
-                                                <i  class="material-icons ">local_gas_station</i>
-                                            </div>
-                                            <div class="col-3 pt-1">
-                                                <small> Combustible por Maquinaria</small>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="#">
-                                        <div class="row">
-                                            <div class="col-1">
-                                                <i  class="material-icons ">build</i>
-                                            </div>
-                                            <div class="col-3 pt-1">
-                                                <small> Daños y fallas</small>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="#">
-                                        <div class="row">
-                                            <div class="col-1">
-                                                <i  class="material-icons ">monetization_on</i>
-                                            </div>
-                                            <div class="col-3 pt-1">
-                                                <small> Gastos monetarios </small>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
                         </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="#">
-                            <div class="row">
-                                <div class="col-1">
-                                    <i  class="material-icons ">notifications_active</i>
-                                </div>
-                                <div class="col-3 pt-1">
-                                    Notificaciones
-                                </div>
+                    </a>
+                    <div class="collapse" id="menu-maquinaria" aria-expanded="false">
+                        <ul class="flex-column pl-2 nav">
+                            <li class="nav-item">
+                                <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="maquinaria-registro.html">
+                                    <div class="row">
+                                        
+                                        <div class="col-1">
+                                            <i class="material-icons">
+                                            add
+                                            </i>
+                                            
+                                        </div>
+                                        <div class="col-3 pt-1">
+                                            <small>Registrar</small>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="maquinaria-modificar.html">
+                                    <div class="row">
+                                        <div class="col-1">
+                                            <i  class="material-icons ">create</i>
+                                        </div>
+                                        <div class="col-3 pt-1">
+                                            <small> Modificar</small>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="maquinaria-consultar.html">
+                                    <div class="row">
+                                        <div class="col-1">
+                                            <i  class="material-icons ">search</i>
+                                        </div>
+                                        <div class="col-3 pt-1">
+                                            <small> Consultar </small>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center collapse" href="#" data-toggle="collapse" data-target="#menu-componente">
+                        <div class="row">
+                            <div class="col-1">
+                                <i  class="material-icons ">picture_in_picture_alt
+                                </i>
                             </div>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center collapse" href="#" data-toggle="collapse" data-target="#submenu1">
-                            <div class="row">
-                                <div class="col-1">
-                                    <i  class="material-icons ">assignment_turned_in</i>
-                                </div>
-                                <div class="col-3 pt-1">
-                                    Tareas
-                                </div>
+                            <div class="col-3 pt-1">
+                                Componentes
                             </div>
-                        </a>
-                        <div class="collapse" id="submenu1" aria-expanded="false">
-                            <ul class="flex-column pl-2 nav">
-                                <li class="nav-item">
-                                    <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="#">
-                                        <div class="row">
-                                            <div class="col-1">
-                                                <i  class="material-icons ">assignment_returned</i>
-                                            </div>
-                                            <div class="col-3 pt-1">
-                                                <small> Crear</small>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="#">
-                                        <div class="row">
-                                            <div class="col-1">
-                                                <i  class="material-icons ">assignment_return</i>
-                                            </div>
-                                            <div class="col-3 pt-1">
-                                                <small>Modificar</small>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="#">
-                                        <div class="row">
-                                            <div class="col-1">
-                                                <i  class="material-icons ">assignment</i>
-                                            </div>
-                                            <div class="col-3 pt-1">
-                                                <small>Estado</small>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
                         </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="#">
-                            <div class="row">
-                                <div class="col-1">
-                                    <i  class="material-icons ">clear
-                                    </i>
-                                </div>
-                                <div class="col-3 pt-1">
-                                    Salir
-                                </div>
+                    </a>
+                    <div class="collapse" id="menu-componente" aria-expanded="false">
+                        <ul class="flex-column pl-2 nav">
+                            <li class="nav-item">
+                                <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="componente-registro.html">
+                                    <div class="row">
+                                        <div class="col-1">
+                                            <i  class="material-icons ">add</i>
+                                        </div>
+                                        <div class="col-3 pt-1">
+                                            <small>Registrar</small>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="componente-modificar.html">
+                                    <div class="row">
+                                        <div class="col-1">
+                                            <i  class="material-icons ">create</i>
+                                        </div>
+                                        <div class="col-3 pt-1">
+                                            <small> Modificar</small>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="componente-consultar.html">
+                                    <div class="row">
+                                        <div class="col-1">
+                                            <i  class="material-icons ">search</i>
+                                        </div>
+                                        <div class="col-3 pt-1">
+                                            <small> Consultar </small>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="incidencia-agregar.html">
+                        <div class="row">
+                            <div class="col-1">
+                                <i  class="material-icons ">fiber_new
+                                </i>
                             </div>
-                        </a>
-                    </li>
-                </ul>
+                            <div class="col-3 pt-1">
+                                Incidencias
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="estadisticas.html">
+                        <div class="row">
+                            <div class="col-1">
+                                <i class="material-icons">
+                                insert_chart
+                                </i>
+                            </div>
+                            <div class="col-3 pt-1">
+                                Estadisticas
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center collapse" href="#" data-toggle="collapse" data-target="#menu-reporte">
+                        <div class="row">
+                            <div class="col-1">
+                                <i  class="material-icons ">description</i>
+                            </div>
+                            <div class="col-3 pt-1">
+                                Reportes
+                            </div>
+                        </div>
+                    </a>
+                    <div class="collapse" id="menu-reporte" aria-expanded="false">
+                        <ul class="flex-column pl-2 nav">
+                            <li class="nav-item">
+                                <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="reporte-combustible.html">
+                                    <div class="row">
+                                        <div class="col-1">
+                                            <i  class="material-icons ">local_gas_station</i>
+                                        </div>
+                                        <div class="col-3 pt-1">
+                                            <small> Combustible por Maquinaria</small>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="reporte-daños.html">
+                                    <div class="row">
+                                        <div class="col-1">
+                                            <i  class="material-icons ">build</i>
+                                        </div>
+                                        <div class="col-3 pt-1">
+                                            <small> Daños y fallas</small>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="reporte-gastos.html">
+                                    <div class="row">
+                                        <div class="col-1">
+                                            <i  class="material-icons ">monetization_on</i>
+                                        </div>
+                                        <div class="col-3 pt-1">
+                                            <small> Gastos monetarios </small>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="notificaciones.html">
+                        <div class="row">
+                            <div class="col-1">
+                                <i  class="material-icons ">notifications</i>
+                            </div>
+                            <div class="col-3 pt-1">
+                                Notificaciones
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center collapse" href="#" data-toggle="collapse" data-target="#submenu1">
+                        <div class="row">
+                            <div class="col-1">
+                                <i  class="material-icons ">assignment_turned_in</i>
+                            </div>
+                            <div class="col-3 pt-1">
+                                Tareas
+                            </div>
+                        </div>
+                    </a>
+                    <div class="collapse" id="submenu1" aria-expanded="false">
+                        <ul class="flex-column pl-2 nav">
+                            <li class="nav-item">
+                                <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="tarea-agregar.html">
+                                    <div class="row">
+                                        <div class="col-1">
+                                            <i  class="material-icons ">assignment_returned</i>
+                                        </div>
+                                        <div class="col-3 pt-1">
+                                            <small> Crear</small>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="tarea-modificar.html">
+                                    <div class="row">
+                                        <div class="col-1">
+                                            <i  class="material-icons ">assignment_return</i>
+                                        </div>
+                                        <div class="col-3 pt-1">
+                                            <small>Modificar</small>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="tarea-estado.html">
+                                    <div class="row">
+                                        <div class="col-1">
+                                            <i  class="material-icons ">assignment</i>
+                                        </div>
+                                        <div class="col-3 pt-1">
+                                            <small>Estado</small>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="suministro-combustible.html">
+                        <div class="row">
+                            <div class="col-1">
+                                <i  class="material-icons ">local_gas_station</i>
+                            </div>
+                            <div class="col-3 pt-1">
+                                Suministro Combustible
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center collapse" href="#" data-toggle="collapse" data-target="#menu-usuario">
+                        <div class="row">
+                            <div class="col-1">
+                                <i  class="material-icons ">face
+                                </i>
+                            </div>
+                            <div class="col-3 pt-1">
+                                Usuario
+                            </div>
+                        </div>
+                    </a>
+                    <div class="collapse" id="menu-usuario" aria-expanded="false">
+                        <ul class="flex-column pl-2 nav">
+                            <li class="nav-item">
+                                <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="usuario-registro.html">
+                                    <div class="row">
+                                        <div class="col-1">
+                                            <i  class="material-icons ">add</i>
+                                        </div>
+                                        <div class="col-3 pt-1">
+                                            <small>Registrar</small>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="usuario-modificar.html">
+                                    <div class="row">
+                                        <div class="col-1">
+                                            <i  class="material-icons ">create</i>
+                                        </div>
+                                        <div class="col-3 pt-1">
+                                            <small> Modificar</small>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="usuario-consultar.html">
+                                    <div class="row">
+                                        <div class="col-1">
+                                            <i  class="material-icons ">search</i>
+                                        </div>
+                                        <div class="col-3 pt-1">
+                                            <small> Consultar </small>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center" href="../index.html">
+                        <div class="row">
+                            <div class="col-1">
+                                <i  class="material-icons ">clear
+                                </i>
+                            </div>
+                            <div class="col-3 pt-1">
+                                Salir
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
             </div>
             <div>
                 <ul class="nav nav-bg-transcolba" >
