@@ -1609,3 +1609,21 @@ body {
 .cid-qUHzTlewmL .mbr-overlay ~ .container-slide {
   z-index: auto;
 }
+.cid-qUHC2QqIo6 {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  background-color: #f9f9f9;
+}
+.cid-qUHC2QqIo6 .mbr-text {
+  color: #767676;
+}
+.cid-qUHC2QqIo6 h4 {
+  text-align: center;
+}
+.cid-qUHC2QqIo6 p {
+  text-align: center;
+}
+.cid-qUHC2QqIo6 .card-img span {
+  font-size: 96px;
+  color: #149dcc;
+}
