@@ -21,3 +21,4 @@ $databasePassword = '';
 $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName); 
  
 ?>
+<?php echo "entro" ?>
