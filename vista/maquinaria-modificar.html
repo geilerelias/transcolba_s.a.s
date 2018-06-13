@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <link href="../assets/img/favicon-32x32.png" rel="shortcut icon">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Modificar Componente</title>
+        <title>Modificar Maquinaria</title>
         <!-- Include Bootstrap CSS -->
         <link rel="stylesheet" type="text/css" href="../assets/plugin/css/bootstrap-material-design.css">
         <link rel="stylesheet" type="text/css" href="../assets/plugin/iconfont/material-icons.css">
@@ -41,45 +41,39 @@
                     <div class="d-none d-sm-block row justify-content-center ">
                         <ul class="nav col-12">
                             <li class="nav-item " >
-                                <a class="nav-link text-white text-capitalize" href="index.html">Inicio</a>
+                                <a class="nav-link text-white text-capitalize" href="index.html" >Inicio</a>
                             </li>
                             <li class="nav-item " >
-                                <a class="nav-link text-white text-capitalize" href="maquinaria-opciones.html">Maquinaria</a>
+                                <a class="nav-link text-white text-capitalize nav-active-transcolba" href="maquinaria-opciones.html">Maquinaria</a>
                             </li>
                         </li>
                         <li class="nav-item text-white">
-                            <a class="nav-link text-white text-capitalize nav-active-transcolba" href="componentes-opciones.html">Componentes</a>
+                            <a class="nav-link text-white text-capitalize" href="componentes-opciones.html">Componentes</a>
                         </li>
                         <li class="nav-item text-white">
                             <a class="nav-link text-white text-capitalize" href="insidencias-registrar.html">Insidencias</a>
                         </li>
                         <li class="nav-item text-white">
-                            <a class="nav-link text-white text-capitalize" href="../index.html">Salir</a>
+                            <a class="nav-link text-white text-capitalize" href="index.html">Salir</a>
                         </li>
                     </ul>
                 </div>
                 
                 <form class="form-inline float-right pr-2">
-                    <div class="row">
-                        <button type="button" class="btn bmd-btn-icon btn-raised text-white mr-2">
-                        <i  class="material-icons ">notifications</i>
-                        </button>
-                        <input class="form-control form-control-sm mr-sm-2 input-search"   type="search" placeholder="Buscar" aria-label="Search">
-                        <button class="btn  bmd-btn-icon text-white mr-2" type="button"><i class="material-icons">
-                        search
-                        </i>
-                        </button>
-                    </div>
+                    <input class="form-control form-control-sm mr-sm-2 input-search"   type="search" placeholder="Buscar" aria-label="Search">
+                    <button class="btn text-white   btn-sm my-2 my-sm-0 h-75 btn-xs" type="submit"><i class="material-icons">
+                    search
+                    </i></button>
                 </form>
             </div>
         </header>
         <!---------- DRAWER-------->
         <div id="dw-s2" class="bmd-layout-drawer bg-faded" aria-expanded="false" aria-hidden="true">
-            <header class="img-menu img-fluid" style="background-image: url(../assets/img/bg-menu.jpg);" >
+            <header class="img-menu img-fluid" style="background-image: url(../assets/img/avatar.png);" >
                 <img id="imagen-usuario" name="imagen-usuario" data-src="holder.js/75x75" class="rounded-circle " alt="75x75" src="" data-holder-rendered="true" style="width: 75px; height: 75px;"  >
                 <a class="navbar-brand title-1 text-white text-capitalize "> <small>Nombre de usuario</small> </a>
             </header>
-           <ul class="nav flex-column flex-nowrap pt-3">
+            <ul class="nav flex-column flex-nowrap pt-3">
                 <li class="nav-item">
                     <a class=" flex-unordered flex-nowrap nav-link btn font-weight-bold text-capitalize align-content-center collapse" href="#" data-toggle="collapse" data-target="#menu-maquinaria">
                         <div class="row">
@@ -418,27 +412,38 @@
         <div>
             <ul class="nav nav-bg-transcolba" >
                 <li class="nav-item">
-                    <a class="nav-link text-capitalize text-transcolba "  href="#">Registrar</a>
+                    <a class="nav-link text-capitalize text-transcolba "  href="maquinaria-registro.html">Registrar</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-capitalize text-transcolba active-secundary-transcolba" href="componente-modificar.html">Modificar</a>
+                    <a class="nav-link text-capitalize text-transcolba active-secundary-transcolba" href="maquinaria-modificar.html">Modificar</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link  text-capitalize text-transcolba" href="componente-consultar.html">Consultar</a>
+                    <a class="nav-link  text-capitalize text-transcolba" href="maquinaria-consultar.html">Consultar</a>
                 </li>
             </ul>
         </div>
         
+<?html
+
+include_once("conexion.html");
+
+$placa= mysqli_real_escape_string($mysqli, $_POST['input-placa']); 
+$result = mysqli_query($mysqli, " SELECT * FROM maquinaria WHERE placa=$placa");
+
+
+
+?>
+
         <!------------------- FIN CABECERA----------------------------------->
         <!------CONTENIDO--------------->
         <div class="container pt-5 mt-5">
             <div class="row justify-content-center">
                 <div class="col-md-9 col-sm-6">
-                    <form action="Maquina" method="get" accept-charset="utf-8">
+                    <form action="../includes/maquinaria-modificar.html" method="POST" accept-charset="utf-8">
                         <div class=" card encabezado" style="z-index: 0">
                             <div class="title" style="background-image: url(../assets/img/camiones.jpg);">
                                 <span class="title-1">
-                                    Registro de Maquinas
+                                    Modificar Maquinaria
                                 </span>
                             </div>
                             <div class="card-body ">
@@ -446,7 +451,7 @@
                                     <div class="col-sm">
                                         <div class="form-group">
                                             <label for="input-placa" class="bmd-label-floating">Placa</label>
-                                            <input type="text" class="form-control" id="input-placa" name="input-placa" required aria-required="true">
+                                            <input type="text" class="form-control" id="input-placa" name="input-placa" disabled aria-required="true">
                                         </div>
                                     </div>
                                     <div class="col-sm">
@@ -498,7 +503,7 @@
                                 </div>
                             </div>
                             <div class="card-footer text-right">
-                                <button type="submit" class="btn btn-raised btn-info">Guardar</button>
+                                <button type="submit" name="btn-modificar" class="btn btn-raised btn-info">Modificar</button>
                             </div>
                         </div>
                     </form>
