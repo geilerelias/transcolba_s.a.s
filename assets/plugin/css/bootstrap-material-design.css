@@ -8983,7 +8983,7 @@ fieldset[disabled][disabled] .custom-file-control .form-control, fieldset[disabl
       background-position: -100%; }
       .switch label input:checked + .bmd-switch-track::after {
         left: calc(100% - 1.25rem);
-        background-color: #3F51B5; }
+        background-color: #094F8E; }
     .switch label input:disabled + .bmd-switch-track:active::after {
       transform: translateY(-50%); }
     .switch label input:disabled + .bmd-switch-track {
