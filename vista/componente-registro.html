@@ -13,22 +13,7 @@
         <link rel="stylesheet" type="text/css" href="../assets/plugin/css/sweetalert2.css">
         <!--estilos propios---->
         <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
-  <!--- imagenes input file--->
-        <style>
-        #img-avatar {
-        vertical-align: middle;
-        width: auto;
-        height: 200px;
-        padding: 0 !important;
-        
-        }
-        #input-file{
-        visibility:hidden;
-        width:0;
-        height:0;
-        }
-        
-        </style>
+  
     </head>
     <body>
         <div class="bmd-layout-container bmd-drawer-f-l bmd-drawer-overlay">
@@ -523,6 +508,19 @@
         <script>
         $(document).ready(function () {
         $('body').bootstrapMaterialDesign();
+
+        document.getElementById("input-file").onchange = function(e) {
+                // Creamos el objeto de la clase FileReader
+                let reader = new FileReader();
+                // Leemos el archivo subido y se lo pasamos a nuestro fileReader
+                reader.readAsDataURL(e.target.files[0]);
+                
+                // Le decimos que cuando este listo ejecute el código interno
+                reader.onload = function(){
+                    image = document.getElementById('img-avatar');
+                    image.src = reader.result;
+                };
+            }//hasta aqui
         });
         </script>
         
