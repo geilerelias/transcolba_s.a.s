@@ -179,3 +179,15 @@
     left: 0;
     background-color: #0577c2e6;
 }
+ #img-avatar {
+        vertical-align: middle;
+        width: auto;
+        height: 200px;
+        padding: 0 !important;
+        
+        }
+        #input-file{
+        visibility:hidden;
+        width:0;
+        height:0;
+        }
