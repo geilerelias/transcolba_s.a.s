@@ -444,16 +444,25 @@
                                         <div id="DatosPersonales" class="">
                                             <div class="container ">
                                                 <div class="row">
-                                                    <div class="input-group col-sm-6 col-6">
-                                                        <span class="input-group-addon pr-2">
-                                                            <i class="material-icons">confirmation_number</i>
-                                                        </span>
-                                                        <div class="form-group label-floating">
-                                                            <label class="control-label bmd-label-floating">Cedula </label>
-                                                            <input id=" input-cedula" name="input-cedula" type="text" class="form-control">
-                                                        </div>
+                                                    <div class="col-sm-5">
+                                                        
+                                                        <input id="input-file" type="file" >
+                                                        
+                                                        <label for="input-file" class="col-sm">
+                                                            <img src="../assets/img/default-avatar.png" id="img-avatar" class=" img-fluid figure-img btn btn-raised  img-thumbnail" alt="imagen de usuario">
+                                                        </label>
                                                     </div>
-                                                    <div class="input-group col-sm-6 col-6">
+                                                    <div class="col-sm-6 col-6">
+                                                        <div class="input-group col-sm ">
+                                                            <span class="input-group-addon pr-2">
+                                                                <i class="material-icons">confirmation_number</i>
+                                                            </span>
+                                                            <div class="form-group label-floating">
+                                                                <label class="control-label bmd-label-floating">Cedula </label>
+                                                                <input id=" input-cedula" name="input-cedula" type="text" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                        <div class="input-group col-sm">
                                                         <span class="input-group-addon pr-2">
                                                             <i class="material-icons">face</i>
                                                         </span>
@@ -462,7 +471,7 @@
                                                             <input id=" input-nombre" name="input-nombre" type="text" class="form-control">
                                                         </div>
                                                     </div>
-                                                    <div class="input-group col-sm-6 col-6">
+                                                    <div class="input-group col-sm">
                                                         <span class="input-group-addon pr-2">
                                                             <i class="material-icons">record_voice_over</i>
                                                         </span>
@@ -473,7 +482,7 @@
                                                     </div>
                                                     
                                                     
-                                                    <div class="input-group col-sm-6 col-6">
+                                                    <div class="input-group col-sm">
                                                         <span class="input-group-addon pr-2">
                                                             <i class="material-icons">phone</i>
                                                         </span>
@@ -482,6 +491,9 @@
                                                             <input name="input-telefono" id="input-telefono" type="text" class="form-control">
                                                         </div>
                                                     </div>
+                                                    </div>
+                                                    
+                                                    
                                                     
                                                 </div>
                                             </div>
@@ -648,6 +660,18 @@
             <script>
             $(document).ready(function() {
             $('body').bootstrapMaterialDesign();
+            document.getElementById("input-file").onchange = function(e) {
+                // Creamos el objeto de la clase FileReader
+                let reader = new FileReader();
+                // Leemos el archivo subido y se lo pasamos a nuestro fileReader
+                reader.readAsDataURL(e.target.files[0]);
+                
+                // Le decimos que cuando este listo ejecute el código interno
+                reader.onload = function(){
+                    image = document.getElementById('img-avatar');
+                    image.src = reader.result;
+                };
+            }//hasta aqui
             } );
             </script>
             
