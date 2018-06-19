@@ -19,6 +19,8 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
         <link rel="stylesheet" type="text/css" href="../assets/plugin/css/sweetalert2.css">
         
+        <!-- floating button -->
+        <link rel="stylesheet" href="../assets/plugin/css/kc.fab.css"/>
         <!--estilos propios---->
         <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
     </head>
@@ -971,13 +973,47 @@
         <script src="../assets/plugin/js/jquery.dataTables.min.js"></script>
         <script src="../assets/plugin/js/dataTables.bootstrap4.min.js" ></script>
         
-        
+        <!-- floating button-->
+        <script src="../assets/plugin/js/kc.fab.min.js"></script>
         
         <script>
         $(document).ready(function() {
         $('body').bootstrapMaterialDesign();
         $('#example').DataTable();
         } );
+        </script>
+        <script>
+        $(document).ready(function(){
+        var links = [
+        {
+        "bgcolor":"#d0301a",
+        "color":"#fffff",
+        "icon":"<strong>+</strong>"
+        },
+        {
+        "url":"http://www.example.com",
+        "bgcolor":"#279beb",
+        "color":"#fffff",
+        "icon":"<i class='material-icons'>create</i>",
+        "target":"_blank"
+        },
+        {
+        "url":"http://www.example.com",
+        "bgcolor":"#279beb",
+        "color":"#fffff",
+        "icon":"<i class='material-icons'>delete</i>"
+        },
+        {
+        "url":"http://www.example.com",
+        "bgcolor":"#279beb",
+        "color":"#fffff",
+        "icon":"<i class='material-icons'>find_replace</i>"
+        }
+        ]
+        $('.kc_fab_wrapper').kc_fab(links);
+        $('.sub_fab_btn').attr('class', 'sub_fab_btn btn bmd-btn-fab bmd-btn-fab-sm');
+        $('.kc_fab_main_btn').attr('class', ' kc_fab_main_btn btn btn bmd-btn-fab');
+        })
         </script>
         
     </div>
