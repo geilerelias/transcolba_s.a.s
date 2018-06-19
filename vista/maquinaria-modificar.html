@@ -446,12 +446,20 @@ $result = mysqli_query($mysqli, " SELECT * FROM maquinaria WHERE placa=$placa");
                                     Modificar Maquinaria
                                 </span>
                             </div>
-                            <div class="card-body ">
+                           <div class="card-body ">
                                 <div class="row">
+                                    <div class="col-sm-4">
+                                        <input id="input-file" type="file" >
+                                    
+                                    <label for="input-file" class="col-sm">
+                                        <img src="../assets/img/subir-img.png" id="img-avatar" class=" img-fluid figure-img btn btn-raised  img-thumbnail" alt="imagen de usuario">
+                                    </label>
+                                    </div>
+                                <div class="col-sm-7">
                                     <div class="col-sm">
                                         <div class="form-group">
                                             <label for="input-placa" class="bmd-label-floating">Placa</label>
-                                            <input type="text" class="form-control" id="input-placa" name="input-placa" disabled aria-required="true">
+                                            <input type="text" class="form-control" id="input-placa" name="input-placa" required aria-required="true">
                                         </div>
                                     </div>
                                     <div class="col-sm">
@@ -466,6 +474,7 @@ $result = mysqli_query($mysqli, " SELECT * FROM maquinaria WHERE placa=$placa");
                                             <input type="number" class="form-control" id="input-linea" required name="input-linea" aria-required="true"  >
                                         </div>
                                     </div>
+                                </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm">
@@ -545,6 +554,18 @@ $result = mysqli_query($mysqli, " SELECT * FROM maquinaria WHERE placa=$placa");
         <script>
         $(document).ready(function () {
         $('body').bootstrapMaterialDesign();
+         document.getElementById("input-file").onchange = function(e) {
+                // Creamos el objeto de la clase FileReader
+                let reader = new FileReader();
+                // Leemos el archivo subido y se lo pasamos a nuestro fileReader
+                reader.readAsDataURL(e.target.files[0]);
+                
+                // Le decimos que cuando este listo ejecute el código interno
+                reader.onload = function(){
+                    image = document.getElementById('img-avatar');
+                    image.src = reader.result;
+                };
+            }//hasta aqui
         });
         </script>
         

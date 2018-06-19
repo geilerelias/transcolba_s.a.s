@@ -441,9 +441,17 @@
                                     Modificar Componentes
                                 </span>
                             </div>
-                            <div class="card-body ">
+                           <div class="card-body ">
                                 <div class="row">
-                                    <div class="col-sm">
+                                    <div class="col-sm-5">
+                                        <input id="input-file" type="file" >
+                                    
+                                    <label for="input-file" class="col-sm">
+                                        <img src="../assets/img/subir-img.png" id="img-avatar" class=" img-fluid figure-img btn btn-raised  img-thumbnail" alt="imagen de usuario">
+                                    </label>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="col-sm">
                                         <div class="form-group">
                                             <label for="input-nombre" class="bmd-label-floating">Nombre</label>
                                             <input type="text" class="form-control" id="input-nombre" name="input-nombre" required aria-required="true">
@@ -461,6 +469,8 @@
                                             <input type="number" class="form-control" id="input-linea" required name="input-linea" aria-required="true"  >
                                         </div>
                                     </div>
+                                    </div>
+                                    
                                 </div>
                                 
                             </div>
@@ -507,6 +517,18 @@
         <script>
         $(document).ready(function () {
         $('body').bootstrapMaterialDesign();
+         document.getElementById("input-file").onchange = function(e) {
+                // Creamos el objeto de la clase FileReader
+                let reader = new FileReader();
+                // Leemos el archivo subido y se lo pasamos a nuestro fileReader
+                reader.readAsDataURL(e.target.files[0]);
+                
+                // Le decimos que cuando este listo ejecute el código interno
+                reader.onload = function(){
+                    image = document.getElementById('img-avatar');
+                    image.src = reader.result;
+                };
+            }//hasta aqui
         });
         </script>
         
