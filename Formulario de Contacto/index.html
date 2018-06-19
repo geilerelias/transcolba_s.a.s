@@ -11,6 +11,21 @@
         <link rel="stylesheet" type="text/css" href="../assets/plugin/css/sweetalert2.css">
         <link rel="stylesheet" href="css/estilos.css">
         <link rel="stylesheet" href="css/font-awesome.css">
+        <style>
+        #img-avatar {
+        vertical-align: middle;
+        width: auto;
+        height: 200px;
+        padding: 0 !important;
+        
+        }
+        #input-file{
+        visibility:hidden;
+        width:0;
+        height:0;
+        }
+        
+        </style>
         
     </head>
     <body>
@@ -18,7 +33,15 @@
             <section class="form_wrap">
                 <section class="cantact_info">
                     <section class="info_title">
-                        <span class="fa fa-user-circle"></span>
+                        <span class="">
+                            <div class="">
+                                <input id="input-file" type="file" >
+                                
+                                <label for="input-file">
+                                    <img src="../assets/img/default-avatar.png" id="img-avatar" class=" img-fluid figure-img btn btn-raised  img-thumbnail" alt="imagen de usuario">
+                                </label>
+                            </div>
+                        </span>
                         <h2>INFORMACION<br>DE CONTACTO</h2>
                     </section>
                     <section class="info_items">
@@ -100,38 +123,6 @@
                     </div>
                 </form>
             </section>
-            <div class="jumbotron jumbotron-fluid">
-                <div class="container">
-                    <h1 class="display-3">Fluid jumbotron</h1>
-                    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of it's parent.</p>
-                    
-                    <style>
-                    #img-avatar {
-                    vertical-align: middle;
-                    width: auto;
-                    height: 200px;
-                    padding: 0 !important;
-                    
-                    }
-                    #input-file{
-                    visibility:hidden;
-                    width:0;
-                    height:0;
-                    }
-                    
-                    </style>
-                    <div class="">
-                        <input id="input-file" type="file" >
-                        
-                        <label for="input-file">
-                            <img src="../assets/img/default-avatar.png" id="img-avatar" class=" img-fluid figure-img btn btn-raised  img-thumbnail" alt="imagen de usuario">
-                        </label>
-                    </div>
-                    
-                    <div id="preview"></div>
-                </div>
-                
-            </div>
         </div>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -141,20 +132,20 @@
         <script src="../assets/plugin/js/bootstrap-material-design.js"></script>
         <script>
         $(document).ready(function () {
-            $('body').bootstrapMaterialDesign();
-            document.getElementById("input-file").onchange = function(e) {
-                // Creamos el objeto de la clase FileReader
-                let reader = new FileReader();
-                // Leemos el archivo subido y se lo pasamos a nuestro fileReader
-                reader.readAsDataURL(e.target.files[0]);
-                
-                // Le decimos que cuando este listo ejecute el código interno
-                reader.onload = function(){
-                    let preview = document.getElementById('preview'),
-                    image = document.getElementById('img-avatar');
-                    image.src = reader.result;
-                };
-            }
+        $('body').bootstrapMaterialDesign();
+        document.getElementById("input-file").onchange = function(e) {
+        // Creamos el objeto de la clase FileReader
+        let reader = new FileReader();
+        // Leemos el archivo subido y se lo pasamos a nuestro fileReader
+        reader.readAsDataURL(e.target.files[0]);
+        
+        // Le decimos que cuando este listo ejecute el código interno
+        reader.onload = function(){
+        let preview = document.getElementById('preview'),
+        image = document.getElementById('img-avatar');
+        image.src = reader.result;
+        };
+        }
         });
         </script>
     </body>

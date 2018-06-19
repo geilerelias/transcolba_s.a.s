@@ -13,6 +13,21 @@
         <link rel="stylesheet" type="text/css" href="../assets/plugin/css/sweetalert2.css">
         <!--estilos propios---->
         <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+        <style>
+        #img-avatar {
+        vertical-align: middle;
+        width: auto;
+        height: 200px;
+        padding: 0 !important;
+        
+        }
+        #input-file{
+        visibility:hidden;
+        width:0;
+        height:0;
+        }
+        
+        </style>
     </head>
     <body>
         <div class="bmd-layout-container bmd-drawer-f-l bmd-drawer-overlay">
@@ -433,7 +448,7 @@
         <!------CONTENIDO--------------->
         <div class="container pt-5 mt-2">
             <div class="row justify-content-center">
-                <div class="col-md-6 col-sm-6 ">
+                <div class="col-md-8 col-sm-8 ">
                     <form action="Maquina" method="get" accept-charset="utf-8">
                         <div class=" card encabezado " style="z-index: 0">
                             <div class="title" style="background-image: url(../assets/img/componentes/bg-repuesto.jpg);">
@@ -441,8 +456,15 @@
                                     Registro de Componentes
                                 </span>
                             </div>
-                            <div class="card-body ">
-                                <div class="row">
+                            <div class="card-body row ">
+                                <div class="col-sm-6">
+                                    <input id="input-file" type="file" >
+                                    
+                                    <label for="input-file" class="col-sm">
+                                        <img src="../assets/img/default-avatar.png" id="img-avatar" class=" img-fluid figure-img btn btn-raised  img-thumbnail" alt="imagen de usuario">
+                                    </label>
+                                </div>
+                                <div class="col-sm-6">
                                     <div class="col-sm">
                                         <div class="form-group">
                                             <label for="input-nombre" class="bmd-label-floating">Nombre</label>
@@ -472,6 +494,7 @@
                 </div>
             </div>
         </div>
+
         <!--------------------FOOTER-------------->
         <footer class="footer">
             <div class="container-fluid pt-lg-4" style="background-color:#279beb; ">
@@ -507,7 +530,21 @@
         <script>
         $(document).ready(function () {
         $('body').bootstrapMaterialDesign();
+        document.getElementById("input-file").onchange = function(e) {
+        // Creamos el objeto de la clase FileReader
+        let reader = new FileReader();
+        // Leemos el archivo subido y se lo pasamos a nuestro fileReader
+        reader.readAsDataURL(e.target.files[0]);
+        
+        // Le decimos que cuando este listo ejecute el código interno
+        reader.onload = function(){
+        
+        image = document.getElementById('img-avatar');
+        image.src = reader.result;
+        };
+        }
         });
+
         </script>
         
     </div>
