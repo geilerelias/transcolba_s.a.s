@@ -113,8 +113,8 @@ z-index:3
 .gw-nav-list>li>a {
   display: block;
   height: 38px;
-  line-height: 36px;
-  padding: 0 16px 0 7px;
+  /*line-height: 36px;
+  padding: 0 16px 0 7px;*/
   background-color: #f9f9f9;
   color: #585858;
   text-shadow: none!important;
@@ -147,7 +147,7 @@ z-index:3
 .gw-nav-list>li.active>a:focus,
 .gw-nav-list>li.active>a:active {
   background-color: #fff;
-  color: #dd4814;
+  color: #279beb;
   font-weight: bold;
   font-size: 13px;
 }
@@ -168,7 +168,7 @@ z-index:3
   top: -1px;
   bottom: 0;
   z-index: 1;
-  border: 2px solid #dd4814;
+  border: 2px solid #279beb;
   border-width: 0 2px 0 0
 }
 
@@ -239,7 +239,7 @@ z-index:3
 
 .gw-nav-list>li .gw-submenu>li>a:hover {
   text-decoration: none;
-  color: #dd4814;
+  color: #279beb;
   background-color: rgba(25,25,50,0.1);
 }
 
@@ -251,10 +251,10 @@ z-index:3
   top: -1px;
   bottom: 0;
   z-index: 1;
-  border: 2px solid #dd4814;
+  border: 2px solid #279beb;
 }
 
-.gw-nav-list>li .gw-submenu>li.active>a { color: #dd4814 }
+.gw-nav-list>li .gw-submenu>li.active>a { color: #279beb }
 
 .gw-nav-list>li .gw-submenu>li a>[class*="icon-"]:first-child {
   display: none;
